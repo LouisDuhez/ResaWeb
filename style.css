@@ -1,0 +1,798 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  background: #242B2F;
+  background: linear-gradient(225deg, #242B2F, #030404);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  
+
+
+}
+
+/* Accueil du site avec le slogan, le logo et un boutton en savoir plus sur le site */
+header {
+  padding: 25px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  background-color: #FBFBFB;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  gap: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 25px 0;
+  font-size: 2rem;
+  border-bottom: 2px solid #08100C;
+
+}
+
+nav h1 {
+  margin: 0;
+  margin-right: auto;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+.btn-nav {
+  padding: 0px 25px;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+  box-shadow: inset 0 0 0 0 #E02B20;
+  transition: ease-in-out 0.3s;
+  font-weight: bold;
+
+
+}
+
+.btn-nav:hover {
+  box-shadow: inset 300px 0 0 0 #E02B20;
+  color: white;
+}
+
+.Accueil {
+  margin-top: 25px;
+  display: flex;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo-and-Join img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.btn-Join-Us {
+  text-decoration: none;
+  color: black;
+  background-color: #FBFBFB;
+  display: flex;
+  padding: 1.1rem 2.5rem 1.1rem 3.5rem;
+  border-radius: 99rem;
+  transition: all 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: solid #08100C 2px;
+  font-size: 1.125rem;
+  margin-bottom: 53.600px;
+  margin-top: 53.600px;
+}
+
+.btn-Join-Us .icon {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-Join-Us .icon span {
+  box-sizing: content-box;
+  background: #E02B20;
+  border-radius: 100%;
+  padding: 0rem;
+
+  width: 0rem;
+  height: 0rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(-180deg);
+
+  transition: all 0.5s ease;
+}
+
+.btn-Join-Us:hover .icon span {
+  transform: rotate(0deg);
+  border-radius: 100%;
+  padding: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.Slogan {
+  width: 49%;
+}
+
+.Slogan h1 {
+  font-size: 4rem;
+  line-height: 1.6;
+}
+
+@media (max-width:900px) {
+  .Accueil {
+    flex-flow: column-reverse;
+  }
+
+  .Slogan {
+    width: 90%;
+  }
+
+}
+
+/* flèche de scroll */
+.scroll-down {
+  position: relative;
+  left: 50%;
+  top: 50px;
+  display: block;
+  text-align: center;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 32px;
+  height: 32px;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
+}
+
+
+/*Animation flèche de scroll*/
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fade_move_down {
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.trait {
+  height: 2px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #08100C;
+}
+
+.trait-blanc {
+  margin-top: 100px;
+  height: 2px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+}
+
+/* La liste des deux services de locations  */
+.part1 {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50px;
+  margin-top: 150px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.text-part1 {
+  color: white;
+}
+
+.text-part1 h2 {
+  margin-top: 0px;
+  margin-left: 25px;
+  font-size: 3rem;
+}
+
+.text-part1 p {
+  margin-left: 25px;
+  font-size: 1.25rem;
+}
+
+.btn-1 {
+  margin-left: 25px;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border: #E02B20 solid 3px;
+  color: white;
+  background-color: none;
+  border-radius: 25px;
+  box-shadow: inset 0 0 0 0 #E02B20;
+  transition: ease-in-out 0.3s;
+
+}
+
+.btn-1:hover {
+  box-shadow: inset 300px 0 0 0 #E02B20;
+}
+
+.part1-number {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.part1-number h3 {
+  margin: 0px;
+}
+
+.number {
+  font-size: 4rem;
+}
+
+.part1link {
+  margin-top: 50px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width:1455px) {
+  .part1 {
+    flex-flow: column;
+    align-items: center;
+    gap: 50px;
+
+  }
+
+  .part1-number {
+    text-align: center;
+  }
+
+}
+
+
+
+
+/* Différents style de text avec couleurs */
+.color-red {
+  color: #E02B20;
+  font-style: italic;
+  font-family: "Faster One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.red-text {
+  color: #E02B20;
+}
+
+.red-background {
+  color: white;
+  background-color: #E02B20;
+  padding: 0 15px;
+}
+
+/* Un peu d'adaptation en fonction de la taille du navigateur */
+@media screen and (max-width:1300px) {
+  .cards-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:930px) {
+  .cards-container {
+    width: 100%;
+  }
+
+  .text-navigation {
+    width: 50%;
+  }
+}
+
+/* Class animation d'apparition au défilement :  */
+
+.hide [class*=hide-] {
+  opacity: 0;
+  transition: 1s;
+}
+
+.right-transition {
+  transform: translateX(100px);
+}
+
+.hide .left-transition {
+  transform: translateX(-100px);
+}
+
+.bottom-transition {
+  transform: translateY(100px);
+}
+
+.reveal [class*=hide-] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal .hide-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal .hide-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal .hide-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal .hide-4 {
+  transition-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion) {
+  .hide [class*=hide-] {
+    opacity: 1;
+    transition: 0s;
+  }
+
+  .right-transition {
+    transform: translateX(0px);
+  }
+
+  .hide .left-transition {
+    transform: translateX(0px);
+  }
+}
+
+/* Navigation avec les cartes */
+
+.navigation {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navigation h2 {
+  color: #FBFBFB;
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.list-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-explication {
+  width: 30%;
+}
+
+.explication-off {
+  height: 0px;
+  transition: 0.3s;
+  position: relative;
+  opacity: 0;
+  top: -50px;
+}
+
+.explication-off p {
+  height: 0;
+}
+
+.explication-on {
+  height: auto;
+  position: relative;
+  top: 0px;
+  opacity: 1;
+  transition: 0.5s;
+  background-color: #FBFBFB;
+}
+
+.explication-on p {
+  height: auto;
+}
+
+.explication-on h3,
+.explication-off h3 {
+  margin: 0px;
+  width: fit-content;
+
+}
+
+.explication-on p,
+.explication-off p {
+  margin: 0;
+  width: 90%;
+  padding: 15px;
+
+}
+
+.card-wrapper {
+  border-radius: 16px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: #08100C;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s all;
+}
+.card-supercars {
+  background-image: url(images/groupe_voiture.jpg);
+}
+.card-moto {
+  background-image: url(images/motos_accueil.jpg);
+}
+
+.card-voiture {
+  background-image: url(images/voiture_groupe.jpg);
+}
+
+.card-background {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.card-background:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.card-background h3 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  width: fit-content;
+  color: white;
+  margin: 0 auto;
+}
+
+.card:hover {
+  scale: 1.2;
+}
+
+/* on fait passer en colone la liste*/
+@media screen and (max-width: 1300px) {
+  .list-navigation {
+    flex-flow: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .card-explication {
+    width: 80%;
+  }
+} 
+.section-profil-card {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.section-profil-card h2 {
+  font-size: 3rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profil-list-card {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.profil-card {
+  width: 30%;
+  background-color: #FBFBFB;
+  color: black;
+  padding: 25px 25px;
+  border-radius: 16px;
+}
+
+.profil-card h3 {
+  width: fit-content;
+  padding: 5px 10px;
+}
+
+.profil-card img {
+  border-radius: 8px;
+  width: 100%;
+  filter: grayscale(100%);
+  transition: 0.5s ease-in-out;
+}
+
+.profil-card img:hover {
+  filter: grayscale(0%);
+}
+
+.to-drive-presentation {
+  width: 50%;
+}
+
+.to-drive-presentation h3 {
+  margin: 0;
+}
+
+.slider-avis {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.slider-avis h2 {
+  margin: 0;
+
+}
+
+footer {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color: #FBFBFB;
+  width: 95%;
+  margin-top: 100px;
+  padding: 25px 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list-footer {
+  margin-top: 30px;
+
+  justify-content: space-around;
+  display: flex;
+
+}
+
+footer a {
+  color: inherit;
+}
+
+footer h2 {
+  margin: 0;
+}
+
+.reseaux-icon {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+
+.avis-list h2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  font-size: 3rem;
+  color: white;
+
+}
+
+.avis-card {
+  padding: 15px 25px;
+  border-radius: 16px;
+  color: #FBFBFB;
+  width: 400px;
+  background-color: #3A3A3A;
+  transition: 0.3s;
+  border: solid 3px transparent;
+}
+
+.avis-card:hover {
+  border: #E02B20 solid 3px;
+}
+
+.top-card {
+  display: flex;
+  align-items: center;
+}
+
+.top-card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.top-card p {
+  margin-left: 15px;
+}
+
+/* Scroll Auto horizontal */
+.scroller {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent);
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller__inner:hover {
+  animation-play-state: paused;
+}
+
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.avis-formulaire {
+  margin-top: 25px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  background-color: #3A3A3A;
+  padding: 15px 25px;
+  border-radius: 16px;
+  display: none;
+  border: solid 3px transparent;
+  transition: 0.3s;
+}
+
+.avis-formulaire h2 {
+  font-size: 2rem;
+}
+
+.avis-formulaire input {
+  margin-bottom: 15px;
+}
+
+.avis-formulaire .trait-blanc {
+  margin-top: 10px;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+
+}
+form input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: #E02B20 2px solid;
+}
+form textarea {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border: #E02B20 2px solid;
+  border-radius: 4px;
+}
+.avis-formulaire:hover {
+  border: #E02B20 solid 3px;
+}
+
+.avis-btn {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.avis-btn a {
+  margin-left: 0px;
+}
