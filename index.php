@@ -85,7 +85,7 @@
                     ?>
                     <div class="avis-card">
                     <div class="top-card">
-                        <img src="images/editoLouis.jpg" alt="">
+                    <i class="fa-solid fa-user"></i>
                         <p><?=$row["clients_avis_nom"]?> <?=$row["clients_avis_prenom"]?></p>
                     </div>
                     <div class="avis">
@@ -109,7 +109,7 @@
             <label for="email">Votre E-mail</label><br>
             <input type="email" id="email" required name="email"><br>
             <label for="avis">Votre Avis<br>
-            <textarea required id="avis" cols="30" rows="10" maxlength="50" name="avi"></textarea>
+            <textarea required id="avis" cols="30" rows="10" maxlength="150" name="avi"></textarea>
             <input type="submit" value="envoyer" name="envoyer">
             <div class="trait-blanc"></div>
           </form>
@@ -188,6 +188,19 @@
                     reprehenderit at velit quia corporis ratione ex atque sit quos quidem possimus aliquam.</p>
                 <div class="slider-avis hide">
                     <h2 class="red-text right-transition hide-1">FAQ</h2>
+                    <details class="first-details">
+                        <summary>D'ou viennent les voitures ?</summary>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum accusamus nobis ab unde sed odio quibusdam deleniti doloribus nam!
+                    </details>
+                    <details>
+                        <summary>Comment ce passe la location ?</summary>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum accusamus nobis ab unde sed odio quibusdam deleniti doloribus nam!
+                    </details>
+                    <details>
+                        <summary>Comment procéder au paiement ?</summary>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum accusamus nobis ab unde sed odio quibusdam deleniti doloribus nam!
+                    </details>
+                    <p>Si vous avez d'autre question n'hésité pas à nous contacter :<br> <a href="mailto:louis.duhez@gmail.com">louis.duhez@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -212,9 +225,9 @@
             <div class="reseaux hide-3">
                 <h2>Réseaux sociaux</h2>
                 <div class="reseaux-icon">
-                    <p><i class="fa-brands fa-instagram"></i></p>
-                    <p><i class="fa-brands fa-youtube"></i></p>
-                    <p><i class="fa-brands fa-facebook"></i></p>
+                    <p><a href="instagram.com"><i class="fa-brands fa-instagram"></i></a></p>
+                    <p><a href="youtube.com"><i class="fa-brands fa-youtube"></i></a></p>
+                    <p><a href="facebook.com"><i class="fa-brands fa-facebook"></i></a></p>
                 </div>
                 <div class="plan-site">
                     <a href="ML.php#plan-du-site">Plan du site</a>

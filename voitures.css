@@ -70,6 +70,11 @@ main {
     margin-left: 10px;
     margin-right: 10px;
 }
+.red-background {
+  color: white;
+  background-color: #E02B20;
+  padding: 0 15px;
+}
 main .tittle-main h1 {
     font-size: 4rem;
     margin:0px;

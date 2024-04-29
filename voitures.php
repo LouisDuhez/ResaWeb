@@ -72,7 +72,7 @@
                     <img src="<?= $row["Cars_image"]?>" alt="">
                 </div>
                 <div class="header-car">
-                    <h1><?= $row["Cars_marque"] ?> <?= $row["Cars_nom"]?></h1>
+                    <h1 class="red-background"><?= $row["Cars_marque"] ?> <?= $row["Cars_nom"]?></h1>
                     <span class="red-text"><?= $row["Cars_prix"]?>&nbsp;€</span>
                 </div>
                 <p><?= $row["Cars_desc"]?></p>
