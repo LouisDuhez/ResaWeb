@@ -99,8 +99,9 @@
         </div>
           <div class="avis-btn"><a href="#avis-formulaire" class="btn-1">Votre Avis</a></div>
           <div id='avis-formulaire'class="avis-formulaire"action="">
-            <h2>Votre Avis <span class="red-text">Compte !</span></h2>
-            <form action="insert_avis.php" method="GET">
+            <h2>Votre Avis Compte !</h2>
+            
+        <form action="insert_avis.php" method="GET">
             <p>Tout les champs sont obligatoires</p>
             <label for="nom">Votre Nom </label><br>
             <input id="nom" type="text" required name="nom"><br>
@@ -109,10 +110,11 @@
             <label for="email">Votre E-mail</label><br>
             <input type="email" id="email" required name="email"><br>
             <label for="avis">Votre Avis<br>
-            <textarea required id="avis" cols="30" rows="10" maxlength="150" name="avi"></textarea>
-            <input type="submit" value="envoyer" name="envoyer">
+            <textarea required id="avis" cols="30" rows="10" maxlength="150" name="avi"></textarea><br>
+            <input class="submit"type="submit" value="Envoyer" name="envoyer">
             <div class="trait-blanc"></div>
-          </form>
+        </form>
+        
     </section>
     <div class="trait-blanc"></div>
     <section class="navigation">

@@ -214,3 +214,9 @@ footer h2 {
     align-items: center;
   }
 }
+.searchbar {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: #E02B20 solid 3px;
+}

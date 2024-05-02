@@ -66,4 +66,3 @@ document.querySelector('.avis-btn a').addEventListener('click', function(event){
   document.querySelector('.avis-formulaire').style.display = 'block'
 })
 
-  

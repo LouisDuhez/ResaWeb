@@ -47,15 +47,17 @@
                     <option value="Aston">Aston Martine</option>
                     <option value="Audi">Audi</option>
                     <option value="BMW">BMW</option>
-                </select>
-            </div>
-            <div>
+                </select><br>
                 <label for="categories">Filtrer par Categories :&nbsp;</label>
                 <select name="categories" id="categories">
                     <option value="collection">Voitures de collections</option>
                     <option value="supercars">Supercars</option>
                     <option value="limousine">Limousine</option>
                 </select>
+            </div>
+            <div class="search">
+                <label for="searchbar">Rechercher :</label>
+                <input id="searchbar" type="text" class="searchbar">
             </div>
         </div>
         <div class="cars-wrapper">
@@ -81,7 +83,7 @@
                     <div class="trait-rouge"></div>
                     <p><?= $row["Cars_ch"]?>&nbsp;Ch</p>
                     <div class="trait-rouge"></div>
-                    <p class=" <?= $row["Cars_couleur"]?> "><?= $row["Cars_couleur"]?></p>
+                    <p class=" <?= $row["Cars_couleur"]?> "><?= $row["Cars_couleur"]?> </p><p><a href="voituresinformation.php?id=<?= $row["Cars_id"]?>">Voir plus...</a></p>
                 </div>
             </div>
         <?php
@@ -123,6 +125,7 @@
     </footer>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
     <script src="allScript.js"></script>
+    <script src="filter.js"></script>
 
 </body>
 </html>

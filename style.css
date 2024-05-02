@@ -751,7 +751,7 @@ footer h2 {
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-20% - 0.5rem));
+    transform: translate(calc(-40% - 0.5rem));
   }
 }
 
@@ -861,4 +861,15 @@ details[open]{
 }
 .slider-avis a:hover {
   color: #E02B20;
+}
+.submit {
+  margin-top: 15px;
+  color: #FBFBFB;
+  padding: 5px 15px;
+  border-radius: 16px;
+  border: #E02B20 solid 3px;
+}
+.submit:hover {
+  box-shadow: inset 300px 0 0 0 #E02B20;
+  color: white;
 }
