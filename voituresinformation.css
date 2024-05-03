@@ -1,0 +1,79 @@
+@import url(allstyle.css);
+
+:root {
+    --photoWidth : 500px;
+    --photoWidthNegatif : -500px;
+}
+
+/*slider*/
+.js-slider {
+    margin-top: 100px;
+    width: var(--photoWidth);
+    height: 400px;
+    overflow: hidden;
+}
+.js-photos {
+    position: relative;
+    display: flex;
+    left: var(--photoWidthNegatif);
+    transition: left 0.3s ease;
+    width: max-content;
+}
+.js-photo {
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    width: var(--photoWidth);
+    height: 300px;
+    
+}
+
+.green {
+    background-color: #5b8f8a;
+}
+.green-dark {
+    background-color: #15524c;
+}
+.green-darker {
+    background-color: #042e2a;
+}
+.js-navigation {
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.js-btn-decale-droite, .js-btn-decale-gauche {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.js-btn-decale-gauche {
+    left: initial;
+    right: 0;
+}
+
+.dots {
+    margin-top: 100px;
+    display: flex;
+    gap: 25px;
+    width: 500px;
+    justify-content: center;
+}
+.dot {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}

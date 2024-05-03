@@ -56,7 +56,7 @@
             </h2>
             <p class="hide-2 left-transition">Accomplissez vos rêves les plus fous avec To Drive</p>
 
-            <div class="part1link hide-3 left-transition"><a class="btn-1" href="voiture.php">Louer une voiture</a></div>
+            <div class="part1link hide-3 left-transition"><a class="btn-1" href="voitures.php">Louer une voiture</a></div>
         </div>
         <?php
         $nbtotal= "SELECT COUNT(*) AS nbcars FROM rw_cars";
