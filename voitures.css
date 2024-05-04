@@ -85,39 +85,7 @@
   margin: 5px;
   height: fit-content;
 }
-footer {
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  background-color: #FBFBFB;
-  width: 95%;
-  margin-top: 100px;
-  padding: 25px 50px;
-  margin-right: auto;
-  margin-left: auto;
-  color: #030404;
-}
 
-.list-footer {
-  margin-top: 30px;
-
-  justify-content: space-around;
-  display: flex;
-
-}
-
-footer a {
-  color: inherit;
-}
-
-footer h2 {
-  margin: 0;
-}
-
-.reseaux-icon {
-  display: flex;
-  justify-content: space-around;
-  font-size: 2rem;
-}
 @media screen and (max-width:1500px){
   .cars-wrapper {
     grid-template-columns: repeat(auto-fill, 600px);

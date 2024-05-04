@@ -77,3 +77,11 @@
     height: 100px;
     background-color: black;
 }
+.information {
+    display: flex;
+    align-items: center;
+    justify-content:space-around ;
+}
+.text_information {
+    width: 40%;
+}

@@ -1,5 +1,7 @@
 @import url(allstyle.css);
-
+body {
+  color: #08100C;
+}
 .Accueil {
   margin-top: 25px;
   display: flex;
@@ -72,6 +74,7 @@
 .Slogan h1 {
   font-size: 4rem;
   line-height: 1.6;
+  color: #08100C;
 }
 
 @media (max-width:900px) {
@@ -538,45 +541,7 @@
 
 }
 
-footer {
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  background-color: #FBFBFB;
-  width: 95%;
-  margin-top: 100px;
-  padding: 25px 50px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
-.list-footer {
-  margin-top: 30px;
-
-  justify-content: space-around;
-  display: flex;
-
-}
-.fa-user {
-  font-size: 2rem;
-  color: #E02B20;
-}
-footer a {
-  color: inherit;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #E02B20;
-}
-
-footer h2 {
-  margin: 0;
-}
-
-.reseaux-icon {
-  display: flex;
-  justify-content: space-around;
-  font-size: 2rem;
-}
 
 .avis-list h2 {
   margin-left: auto;
