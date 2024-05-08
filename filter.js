@@ -13,17 +13,28 @@ let voitureCards = document.querySelectorAll(".car-card");
 
 /* On crée maintenant une fonction pour rechercher si des lettres sont présentes dans les cartes */
 function filterElements(letters, elements) {
-  if (letters.length > 0) {
-    /* On crée une boucle for avec i (index) initialisé à 0 qui va ensuite s'incrémenter (grâce à i++) pour pouvoir parcourir tous les éléments */
-    for (let i = 0; i < elements.length; i++) {
-      /* on vérifie que la variable letters est bien contenue dans elements */
-      if (elements[i].textContent.toLowerCase().includes(letters)) {
-        /* Si letters est contenue dans elements alors on met un display block */
-        elements[i].style.display = "block";
-      } else {
-        /* Si letters n'est pas contenue dans elements alors on met un display none */
-        elements[i].style.display = "none";
+  if (letters.length == 0){
+      document.querySelectorAll(".car-card").forEach(function (e){
+      e.style.display= "block";
+    }
+  )
+      
+    }
+    
+  else {
+    if (letters.length > 0) {
+      /* On crée une boucle for avec i (index) initialisé à 0 qui va ensuite s'incrémenter (grâce à i++) pour pouvoir parcourir tous les éléments */
+      for (let i = 0; i < elements.length; i++) {
+        /* on vérifie que la variable letters est bien contenue dans elements */
+        if (elements[i].textContent.toLowerCase().includes(letters)) {
+          /* Si letters est contenue dans elements alors on met un display block */
+          elements[i].style.display = "block";
+        } else {
+          /* Si letters n'est pas contenue dans elements alors on met un display none */
+          elements[i].style.display = "none";
+        }
       }
     }
   }
-}
+  }
+  

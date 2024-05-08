@@ -71,6 +71,12 @@
   background-color: rgb(255, 140, 0);
   padding: 0px 10px;
 }
+
+.Noir {
+  color: white;
+  background-color: black;
+  padding: 0px 10px;
+}
 .Vert {
   color: #FBFBFB;
   background-color: darkgreen;
@@ -103,4 +109,9 @@
   background-color: transparent;
   border: none;
   border-bottom: #E02B20 solid 3px;
+  color: #FBFBFB;
+}
+
+.red-text {
+  color: #E02B20;
 }

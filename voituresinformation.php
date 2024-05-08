@@ -15,6 +15,9 @@ foreach($Cars as $cars){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="voituresinformation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"> 
     <title><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?> - TO Drive</title>
 </head>
 <body>
@@ -22,7 +25,7 @@ foreach($Cars as $cars){
         <nav>
             <h1><a href="index.php">To drive</a></h1>
             <a class="btn-nav" href="index.php">Accueil</a>
-            <a class="btn-nav" href="voitures.php">Voitures</a>
+            <a class="btn-nav red-text" href="voitures.php">Voitures</a>
         </nav>
     </header>
     <main>
@@ -34,7 +37,7 @@ foreach($Cars as $cars){
                 <h1 class="red-text"><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></h1>
             </div>
         </div>
-        <div class="information">
+        <div class="voiture_information">
             <div class="text_information">
                 <div class="text">
                     <p><?= $cars["Cars_desc"]?></p>
@@ -49,19 +52,19 @@ foreach($Cars as $cars){
             
                 <div class="js-photos">
                     <div class="js-photo green-darker">
-                        Photo3
+                        <img src="<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green">
-                        Photo1
+                    <img src="<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green-dark">
-                        Photo2
+                    <img src="<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green-darker">
-                        Photo3
+                    <img src="<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green">
-                        Photo1
+                    <img src="<?= $cars["Cars_image"]?>" alt="">
                     </div>
                 </div>
             </div>

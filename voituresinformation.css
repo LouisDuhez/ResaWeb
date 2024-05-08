@@ -19,6 +19,7 @@
     transition: left 0.3s ease;
     width: max-content;
 }
+
 .js-photo {
     color: white;
     flex-shrink: 0;
@@ -26,6 +27,9 @@
     width: var(--photoWidth);
     height: 300px;
     
+}
+.js-photo img {
+    width: 100%;
 }
 
 .green {
@@ -77,11 +81,20 @@
     height: 100px;
     background-color: black;
 }
-.information {
-    display: flex;
-    align-items: center;
-    justify-content:space-around ;
-}
 .text_information {
     width: 40%;
 }
+.voiture_information {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.number {
+
+    display: flex;
+    gap: 25px;
+}
+
+.red-text {
+    color: #E02B20;
+  }
