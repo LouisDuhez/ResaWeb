@@ -1,6 +1,6 @@
 // Animation au défilement du navigateur
 // création de l'observeur
-let ratio = 0.5
+let ratio = 0.4
 let options = {
     root: null,
     rootMargin: "0px",

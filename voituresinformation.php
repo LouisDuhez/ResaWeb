@@ -25,7 +25,7 @@ foreach($Cars as $cars){
         <nav>
             <h1><a href="index.php">To drive</a></h1>
             <a class="btn-nav" href="index.php">Accueil</a>
-            <a class="btn-nav red-text" href="voitures.php">Voitures</a>
+            <a class="btn-nav" href="voitures.php">Voitures</a>
         </nav>
     </header>
     <main>

@@ -1,7 +1,7 @@
 @import url(allstyle.css);
 
 .filtre {
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-content: space-around;
     font-size: 1.5rem;
@@ -19,17 +19,19 @@
   color: #08100C;
 }
 .cars-wrapper {
-  margin-top: 100px;
+  margin-top: 90px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1400px;
+
   width: 100%;
   height: auto;
   display: grid;
+  justify-content: center;
+  gap: 25px;
   grid-template-columns: repeat(auto-fill, 650px);
-  gap: 50px;
 }
 .car-card {
+  margin-top: 50px;
   width: 600px;
   padding-bottom: 25px;
   border-bottom: 3px #FBFBFB solid;
@@ -85,7 +87,9 @@
 .bottom-car {
   display: flex;
   width: fit-content;
+  align-items: center;
   gap: 10px;
+  width: 100%;
 }
 .bottom-car p {
   margin: 5px;
@@ -113,5 +117,15 @@
 }
 
 .red-text {
+  color: #E02B20;
+}
+.bottom-car a{
+  color: white;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: 15px;
+}
+.bottom-car a:hover {
+  text-decoration: underline;
   color: #E02B20;
 }

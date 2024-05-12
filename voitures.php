@@ -23,8 +23,8 @@
         </nav>
     </header>
     <main>
-        <div class="plan-site">
-            <p>Accueil <span class="red-text">></span> Location voitures de sport, limousine, supercars.</p>
+        <div class="plan-site hide">
+            <p class="hide-1 left-transition">Accueil <span class="red-text">></span> Location voitures de sport, limousine, supercars.</p>
         </div>
         <?php
         $nbtotal= "SELECT COUNT(*) AS nbcars FROM rw_cars";
@@ -32,35 +32,36 @@
         $result = $nbcars->fetchall(PDO::FETCH_ASSOC);
         foreach ($result as $row) {
         ?>
-        <div class="tittle-main">
-            <h1 class="red-text">Véhicules à louer</h1>
-            <p class="location-voiture">Découvrer notre stock disponible de <span class="red-text number"><?= $row["nbcars"]?></span> voitures</p>
+        <div class="tittle-main hide">
+            <h1 class="red-text hide-1 left-transition">Véhicules à louer</h1>
+            <p class="location-voiture hide-2 left-transition">Découvrer notre stock disponible de <span class="red-text number"><?= $row["nbcars"]?></span> voitures</p>
         </div>
         <?php
         }
         ?>
-        <div class="filtre">
+        <div class="filtre hide">
             <div>
-                <label for="marques">Filtrer par marques :</label>
-                <select name="marques" id="marques">
+                <label class="hide-1" for="marques">Filtrer par marques :</label>
+                <select class="hide-1" name="marques" id="marques">
                     <option value="all">Toutes les marques</option>
                     <option value="Alpine">ALpine</option>
                     <option value="Aston">Aston Martine</option>
                     <option value="Audi">Audi</option>
                     <option value="BMW">BMW</option>
                 </select><br>
-                <label for="categories">Filtrer par Categories :&nbsp;</label>
-                <select name="categories" id="categories">
+                <label class="hide-1" for="categories">Filtrer par Categories :&nbsp;</label>
+                <select class="hide-1" name="categories" id="categories">
                     <option value="collection">Voitures de collections</option>
                     <option value="supercars">Supercars</option>
                     <option value="limousine">Limousine</option>
                 </select>
             </div>
             <div class="search">
-                <label for="searchbar">Rechercher :</label>
-                <input id="searchbar" type="text" class="searchbar">
+                <label class="hide-1" for="searchbar">Rechercher :</label>
+                <input id="searchbar" type="text" class="searchbar hide-1">
             </div>
         </div>
+
         <div class="cars-wrapper">
         <?php 
         $allCars= "SELECT * FROM rw_cars AS cars";
@@ -69,22 +70,22 @@
         foreach ($result as $row) {
         ?>
         
-            <div class="car-card">
+            <div class="car-card hide">
 
-                <div class="image-car">
+                <div class="image-car hide-1">
                     <img src="<?= $row["Cars_image"]?>" alt="">
                 </div>
-                <div class="header-car">
+                <div class="header-car hide-2">
                     <h2 class="red-background"><?= $row["Cars_marque"] ?> <?= $row["Cars_nom"]?></h2>
                     <span class="red-text"><?= $row["Cars_prix"]?>&nbsp;€</span>
                 </div>
-                <p><?= $row["Cars_desc"]?></p>
-                <div class="bottom-car">
+                <p class="hide-3"><?= $row["Cars_desc"]?></p>
+                <div class="bottom-car hide-4">
                     <p><?= $row["Cars_vitesse"]?>&nbsp;Km/h</p>
                     <div class="trait-rouge"></div>
                     <p><?= $row["Cars_ch"]?>&nbsp;Ch</p>
                     <div class="trait-rouge"></div>
-                    <p class=" <?= $row["Cars_couleur"]?> "><?= $row["Cars_couleur"]?> </p><p><a href="voituresinformation.php?id=<?= $row["Cars_id"]?>">Voir plus...</a></p>
+                    <p class=" <?= $row["Cars_couleur"]?> "><?= $row["Cars_couleur"]?> </p><a href="voituresinformation.php?id=<?= $row["Cars_id"]?>">Voir plus <span class="sr-only"><?= $row["Cars_nom"]?> <?= $row["Cars_marque"]?></span></a>  
                 </div>
             </div>
         <?php
