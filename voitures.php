@@ -24,7 +24,7 @@
     </header>
     <main>
         <div class="plan-site hide">
-            <p class="hide-1 left-transition">Accueil <span class="red-text">></span> Location voitures de sport, limousine, supercars.</p>
+            <p class="hide-1 left-transition">Accueil <span class="red-text">></span> Location</p>
         </div>
         <?php
         $nbtotal= "SELECT COUNT(*) AS nbcars FROM rw_cars";
@@ -43,18 +43,18 @@
             <div>
                 <label class="hide-1" for="marques">Filtrer par marques :</label>
                 <select class="hide-1" name="marques" id="marques">
-                    <option value="all">Toutes les marques</option>
-                    <option value="Alpine">ALpine</option>
-                    <option value="Aston">Aston Martine</option>
-                    <option value="Audi">Audi</option>
-                    <option value="BMW">BMW</option>
+                <option value="all">Toutes les marques</option>
+                <?php 
+                $allCars= "SELECT DISTINCT Cars_marque FROM rw_cars AS cars";
+                $cars = $db->query($allCars);
+                $result = $cars->fetchall(PDO::FETCH_ASSOC);
+                foreach ($result as $row) {
+                ?>   
+                    <option value="<?= $row["Cars_marque"]?>"><?= $row["Cars_marque"]?></option>
+                <?php 
+                };
+                ?>
                 </select><br>
-                <label class="hide-1" for="categories">Filtrer par Categories :&nbsp;</label>
-                <select class="hide-1" name="categories" id="categories">
-                    <option value="collection">Voitures de collections</option>
-                    <option value="supercars">Supercars</option>
-                    <option value="limousine">Limousine</option>
-                </select>
             </div>
             <div class="search">
                 <label class="hide-1" for="searchbar">Rechercher :</label>
@@ -70,7 +70,7 @@
         foreach ($result as $row) {
         ?>
         
-            <div class="car-card hide">
+            <div class="car-card hide <?=$row["Cars_marque"]?>" data-marque="<?=$row["Cars_marque"]?>">
 
                 <div class="image-car hide-1">
                     <img src="<?= $row["Cars_image"]?>" alt="">

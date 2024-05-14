@@ -103,9 +103,10 @@ foreach($Cars as $cars){
 
 
     </footer>
+    <?php
+ } 
+?>
+<script src="allScript.js"></script>
 </body>
 </html>
 
-<?php
- } 
-?>
