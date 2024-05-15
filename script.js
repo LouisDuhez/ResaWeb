@@ -1,6 +1,15 @@
-let supercars = document.querySelector(".supercars-js")
-let limousine = document.querySelector(".limousine-js")
-let oldcars = document.querySelector(".oldCars-js")
+
+
+let nb = 1;
+let allnb = document.querySelectorAll(".supercars-js").forEach((e)=> {
+  
+  e.classList.add("nb"+ nb)
+  nb = nb + 1
+  return
+})
+let nb1 = document.querySelector(".nb1")
+let nb2 = document.querySelector(".nb2")
+let nb3 = document.querySelector(".nb3")
 
 function addText (nb) {
   document.querySelectorAll(".explication-off")[nb].classList.add('explication-on')
@@ -11,25 +20,25 @@ function removeText (a) {
   return
 }
 
-supercars.addEventListener('mouseover', function(event) {
+nb1.addEventListener('mouseover', function(event) {
   addText (0)
 })
-limousine.addEventListener('mouseover', function(event) {
+nb2.addEventListener('mouseover', function(event) {
   addText (1)
 })
-oldcars.addEventListener('mouseover', function(event) {
+nb3.addEventListener('mouseover', function(event) {
   addText (2)
 })
 
 
 
-supercars.addEventListener('mouseleave', (e)=> {
+nb1.addEventListener('mouseleave', (e)=> {
   removeText (0)
 })
-limousine.addEventListener('mouseleave', (e)=> {
+nb2.addEventListener('mouseleave', (e)=> {
   removeText (0)
 })
-oldcars.addEventListener('mouseleave', (e)=> {
+nb3.addEventListener('mouseleave', (e)=> {
   removeText (0)
 })
 

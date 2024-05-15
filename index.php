@@ -119,58 +119,35 @@
     <div class="trait-blanc"></div>
     <section class="navigation">
         <div class="hide">
-            <h2 class="hide-1">A vous de <span class="red-text hide-2">choisir...</span></h2>
+            <h2 class="hide-1">Nos<span class="red-text hide-2"> Derniers </span> modèles</h2>
+            <p>À vous de <span class="red-text hide-2"> choisirs </span>...</p>
         </div>
         <div class="list-navigation hide">
-            <div class="card-explication supercars-js">
+        <?php
+        $carsSelect= "SELECT *
+        FROM rw_cars AS cars
+        ORDER BY cars_id DESC LIMIT 3";
+        $cars = $db->query($carsSelect);
+        $result = $cars->fetchall(PDO::FETCH_ASSOC);
+        foreach ($result as $row) {
+        ?>
+            <div class="card-explication supercars-js" data-id="<?= $row["Cars_id"] ?>">
                 <div class="card-wrapper hide-1 left-transition">
-                    <div class="card card-voiture">
+                    <div class="card card-voiture" style="background-image: url(<?= $row["Cars_image"]?>);">
                         <div class="card-background">
-                            <h3>Voitures</h3>
+                            <h3><?= $row["Cars_nom"]?></h3>
                         </div>
                     </div>
                 </div>
                 <div class="explication-off">
-                    <h3 class="red-background">Supercars</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellat incidunt, cum quas quis
-                        atque. Obcaecati non reprehenderit est amet fugiat quam, nisi nesciunt, repellat repellendus
-                        rerum magnam quae eveniet neque aspernatur illum molestias, delectus sint. Tenetur natus modi
-                        eum maxime, quis, facere odit accusantium magnam incidunt fugiat voluptates enim.</p>
+                    <h3 class="red-background"><?= $row["Cars_marque"]?> <?= $row["Cars_nom"]?></h3>
+                    <p><?= $row["Cars_desc"]?></p>
+                    <p><a href="voituresinformation.php?id=<?= $row["Cars_id"]?>">Voir plus <span class="sr-only"><?= $row["Cars_nom"]?> <?= $row["Cars_marque"]?></span></a>  </p>
                 </div>
             </div>
-            <div class="card-explication limousine-js">
-                <div class="card-wrapper hide-1">
-                    <div class="card card-supercars">
-                        <div class="card-background">
-                            <h3>Supercars</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="explication-off">
-                    <h3 class="red-background">Supercars</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellat incidunt, cum quas quis
-                        atque. Obcaecati non reprehenderit est amet fugiat quam, nisi nesciunt, repellat repellendus
-                        rerum magnam quae eveniet neque aspernatur illum molestias, delectus sint. Tenetur natus modi
-                        eum maxime, quis, facere odit accusantium magnam incidunt fugiat voluptates enim.</p>
-                </div>
-            </div>
-            <div class="card-explication oldCars-js">
-                <div class="card-wrapper hide-1 right-transition">
-                    <div class="card card-moto">
-                        <div class="card-background">
-                            <h3>Moto</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="explication-off">
-                    <h3 class="red-background">Supercars</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellat incidunt, cum quas quis
-                        atque. Obcaecati non reprehenderit est amet fugiat quam, nisi nesciunt, repellat repellendus
-                        rerum magnam quae eveniet neque aspernatur illum molestias, delectus sint. Tenetur natus modi
-                        eum maxime, quis, facere odit accusantium magnam incidunt fugiat voluptates enim.</p>
-                </div>
-            </div>
-
+        <?php 
+        }
+        ?>
     </section>
     <div class="trait-blanc"></div>
     <section id="team" class="section-profil-card hide">

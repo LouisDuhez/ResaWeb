@@ -264,7 +264,7 @@ body {
 /* Navigation avec les cartes */
 
 .navigation {
-  width: 80%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -275,6 +275,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
+}
+.navigation p {
+  color: white;
+  font-size: 2rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .list-navigation {
@@ -297,6 +304,8 @@ body {
 
 .explication-off p {
   height: 0;
+  color: #08100C;
+  font-size: 1rem;
 }
 
 .explication-on {
@@ -326,7 +335,12 @@ body {
   padding: 15px;
 
 }
-
+.explication-on p a {
+  color: #08100C;
+}
+.explication-on p a:hover {
+  color: #E02B20;
+}
 .card-wrapper {
   border-radius: 16px;
   width: 100%;
@@ -343,25 +357,17 @@ body {
   background-size: cover;
   transition: 0.5s all;
 }
-.card-supercars {
-  background-image: url(images/groupe_voiture.jpg);
-}
-.card-moto {
-  background-image: url(images/motos_accueil.jpg);
-}
 
-.card-voiture {
-  background-image: url(images/voiture_groupe.jpg);
-}
 
 .card-background {
   width: 100%;
   height: 100%;
   transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .card-background:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 
 }
 
@@ -395,7 +401,7 @@ body {
     gap: 20px;
   }
   .profil-card {
-    width: 700px;
+    width: 50% !important;
   }
   .to-drive-presentation {
     width: 80%;
