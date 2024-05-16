@@ -22,16 +22,17 @@ foreach($Cars as $cars){
 </head>
 <body>
     <header>
+    <a href="#main" class="skip">Skip to main content</a>
         <nav>
             <h1><a href="index.php">To drive</a></h1>
             <a class="btn-nav" href="index.php">Accueil</a>
             <a class="btn-nav" href="voitures.php">Voitures</a>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <div>
             <div class="plan-site">
-                <p>Accueil <span class="red-text">></span> Location <span class="red-text">></span><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></p>
+                <p><a href="index.php">Accueil</a> <span class="red-text">></span> <a href="voitures.php"> Voitures</a> <span class="red-text">></span><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></p>
             </div>
             <div class="tittle-main">
                 <h1 class="red-text"><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></h1>

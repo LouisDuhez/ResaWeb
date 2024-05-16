@@ -20,6 +20,7 @@
     include ("connect.php")
     ?>
     <header>
+    <a href="#part1" class="skip">Skip to main content</a>
         <nav>
             <h1><a href="#top">To drive</a></h1>
             <a class="btn-nav" href="voitures.php">Voitures</a>
@@ -50,7 +51,7 @@
         <div class="trait"></div>
     </header>
     <div class="scroll-down"></div>
-    <section class="part1">
+    <section id="part1" class="part1">
         <div class="text-part1 hide">
             <h2 class="hide-1 left-transition">La location,<br> Pour plus de <span class="red-text">liberté...</span>
             </h2>

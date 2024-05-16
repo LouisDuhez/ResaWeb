@@ -13,6 +13,20 @@
       
   
   }
+  .skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #E02B20;
+  }
+  .skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
   /*Screen reader Only */
   .sr-only {
     position: absolute;
@@ -64,6 +78,10 @@ nav {
     font-size: 2rem;
     border-bottom: 2px solid #08100C;
 
+}
+.plan-site p a{
+  color: #FBFBFB;
+  text-decoration: none;
 }
 nav h1 {
     margin: 0;

@@ -16,15 +16,16 @@
     include ("connect.php")
     ?>
     <header>
+    <a href="#main" class="skip">Skip to main content</a>
         <nav>
             <h1><a href="index.php">To drive</a></h1>
             <a class="btn-nav" href="index.php">Accueil</a>
             <a class="btn-nav red-text" href="voitures.php">Voitures</a>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <div class="plan-site hide">
-            <p class="hide-1 left-transition">Accueil <span class="red-text">></span> Location</p>
+            <p class="hide-1 left-transition"><a href="index.php">Accueil</a> <span class="red-text">></span> <a href="voitures.php">Voitures</a></p>
         </div>
         <?php
         $nbtotal= "SELECT COUNT(*) AS nbcars FROM rw_cars";
