@@ -34,42 +34,97 @@ foreach($Cars as $cars){
             <div class="plan-site">
                 <p><a href="index.php">Accueil</a> <span class="red-text">></span> <a href="voitures.php"> Voitures</a> <span class="red-text">></span><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></p>
             </div>
-            <div class="tittle-main">
-                <h1 class="red-text"><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></h1>
+            <div class="title-slider">
+                <div class="tittle-main">
+                    <h1 class="red-text"><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></h1>
+                    <div class="bloc-info">
+                <div class="info">
+                <p>02/2023</p>
+                <div class="traitRouge"></div>
+                <p>6950km</p>
+                <div class="traitRouge"></div>
+                <p>Automatique</p>
+
+            </div>
+            <div class="bloc-prix">
+                <p>Prix : <span class="red-text"><?=$cars["Cars_prix"]?></span> /Jour</p>
             </div>
         </div>
-        <div class="voiture_information">
-            <div class="text_information">
-                <div class="text">
-                    <p><?= $cars["Cars_desc"]?></p>
                 </div>
-                <div class="number">
-                    <p><?= $cars["Cars_ch"]?>&nbsp;Ch</p>
-                    <p><?= $cars["Cars_vitesse"]?>&nbsp;Km/h</p>
-                </div>
-        
-            </div>
-            <div class="js-slider">
+                <div class="js-slider">
             
                 <div class="js-photos">
                     <div class="js-photo green-darker">
-                        <img src="<?= $cars["Cars_image"]?>" alt="">
+                        <img src="images/<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green">
-                    <img src="<?= $cars["Cars_image"]?>" alt="">
+                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green-dark">
-                    <img src="<?= $cars["Cars_image"]?>" alt="">
+                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green-darker">
-                    <img src="<?= $cars["Cars_image"]?>" alt="">
+                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
                     </div>
                     <div class="js-photo green">
-                    <img src="<?= $cars["Cars_image"]?>" alt="">
+                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
                     </div>
                 </div>
             </div>
+            </div>
         </div>
+    </div>
+    <div class="information-voiture-bloc">
+        
+        <div class="desc">
+            <table>
+                <caption><h3>Caractéristiques techniques :</h3></caption>
+                <tr>
+                    <th>Marques :</th>
+                    <td><?= $cars["Cars_marque"]?></td>
+                </tr>
+                <tr>
+                    <th>Modèles :</th>
+                    <td><?= $cars["Cars_nom"]?></td>
+                </tr>
+                <tr>
+                    <th>Kilométrage :</th>
+                    <td><?= $cars["Cars_kilo"]?></td>
+                </tr>
+                <tr>
+                    <th>Nombre de place :</th>
+                    <td><?= $cars["Cars_place"]?></td>
+                </tr>
+                <tr>
+                    <th>Puissance DIN :</th>
+                    <td><?= $cars["Cars_ch"]?></td>
+                </tr>
+                <tr>
+                    <th>Boite de vitesse :</th>
+                    <td><?= $cars["Cars_boite"]?></td>
+                </tr>
+                <tr>
+                    <th>Carburant :</th>
+                    <td><?= $cars["Cars_carburant"]?></td>
+                </tr>
+                <tr>
+                    <th>Couleur</th>
+                    <td><?= $cars["Cars_couleur"]?></td>
+                </tr>
+            </table>
+        </div>
+        <div class="image image1">
+            <img src="images/<?= $cars["Cars_image2"]?>" alt="">
+        </div>
+        <div class="image image2">
+        <img src="images/<?= $cars["Cars_image3"]?>" alt="">
+        </div>
+        <div class="caracteristique">
+            <h2><span class="red-text">Histoire</span></h2>
+            <p><?=$cars["Cars_desc"]?></p>
+        </div>
+        
+    </div>
     </main>
     <script src="slider.js"></script>
     <footer class="hide">

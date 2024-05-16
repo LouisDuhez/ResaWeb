@@ -40,6 +40,8 @@
   overflow: hidden;
   width: 100%;
   height: 300px;
+  object-fit: cover;
+  object-position: center;
 }
 .car-card img {
   width: 100%;
@@ -50,6 +52,10 @@
 }
 .car-card img:hover {
   scale: 1.05;
+}
+.car-card p {
+  max-height: 185px;
+  overflow-y: hidden;
 }
 .header-car {
   display: flex;
@@ -68,9 +74,9 @@
   background-color: #FBFBFB;
   padding: 0px 10px;
 }
-.Orange {
-  color: #030404;
-  background-color: rgb(255, 140, 0);
+.Rouge {
+  color: white;
+  background-color: #E02B20;
   padding: 0px 10px;
 }
 
@@ -79,9 +85,14 @@
   background-color: black;
   padding: 0px 10px;
 }
-.Vert {
+.Gris {
+  color: black;
+  background-color: gray;
+  padding: 0px 10px;
+}
+.Bleu {
   color: #FBFBFB;
-  background-color: darkgreen;
+  background-color: blue;
   padding: 0px 10px;
 }
 .bottom-car {

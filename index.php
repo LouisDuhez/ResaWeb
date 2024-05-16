@@ -134,7 +134,7 @@
         ?>
             <div class="card-explication supercars-js" data-id="<?= $row["Cars_id"] ?>">
                 <div class="card-wrapper hide-1 left-transition">
-                    <div class="card card-voiture" style="background-image: url(<?= $row["Cars_image"]?>);">
+                    <div class="card card-voiture" style="background-image: url(images/<?= $row["Cars_image"]?>);">
                         <div class="card-background">
                             <h3><?= $row["Cars_nom"]?></h3>
                         </div>
@@ -142,7 +142,6 @@
                 </div>
                 <div class="explication-off">
                     <h3 class="red-background"><?= $row["Cars_marque"]?> <?= $row["Cars_nom"]?></h3>
-                    <p><?= $row["Cars_desc"]?></p>
                     <p><a href="voituresinformation.php?id=<?= $row["Cars_id"]?>">Voir plus <span class="sr-only"><?= $row["Cars_nom"]?> <?= $row["Cars_marque"]?></span></a>  </p>
                 </div>
             </div>

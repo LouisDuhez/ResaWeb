@@ -20,7 +20,8 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
-    color: #E02B20;
+    color: black;
+    font-weight: bold;
   }
   .skip:focus {
     position: static;
@@ -119,7 +120,7 @@ main {
 main .tittle-main h1 {
     font-size: 4rem;
     margin:0px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 .tittle-main p {
     margin: 0px;

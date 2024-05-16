@@ -21,7 +21,7 @@
     </header>
     <main>
         <div class="plan-site">
-            <p>Accueil <span class="red-text">></span> Location voitures de sport, limousine, supercars.</p>
+            <p><a href="index.php">Accueil</a> <span class="red-text">></span>Mentions Légales</p>
         </div>
         <div class="tittle-main">
             <h1 class="red-text"id="#information">Informations Suplémentaire :</h1>

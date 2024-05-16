@@ -348,6 +348,10 @@ body {
   overflow: hidden;
   background-color: #08100C;
 }
+.card-wrapper:hover {
+  border-bottom-left-radius:0 ;
+  border-bottom-right-radius:0 ;
+}
 
 .card {
   width: 100%;

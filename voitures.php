@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,12 +69,13 @@
         $cars = $db->query($allCars);
         $result = $cars->fetchall(PDO::FETCH_ASSOC);
         foreach ($result as $row) {
+            
         ?>
         
             <div class="car-card hide <?=$row["Cars_marque"]?>" data-marque="<?=$row["Cars_marque"]?>">
 
                 <div class="image-car hide-1">
-                    <img src="<?= $row["Cars_image"]?>" alt="">
+                    <img src="images/<?= $row["Cars_image"]?>" alt="">
                 </div>
                 <div class="header-car hide-2">
                     <h2 class="red-background"><?= $row["Cars_marque"] ?> <?= $row["Cars_nom"]?></h2>
