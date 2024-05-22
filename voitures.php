@@ -56,6 +56,12 @@
                 };
                 ?>
                 </select><br>
+                <label for="prix">Trier par prix :</label>
+                <select name="prix" id="prix">
+                    <option value="NONE"></option>
+                    <option value="DESC">Décroissant</option>
+                    <option value="ASC">Croissant</option>
+                </select>
             </div>
             <div class="search">
                 <label class="hide-1" for="searchbar">Rechercher :</label>
@@ -72,7 +78,7 @@
             
         ?>
         
-            <div class="car-card hide <?=$row["Cars_marque"]?>" data-marque="<?=$row["Cars_marque"]?>">
+            <div class="car-card hide <?=$row["Cars_marque"]?>" data-marque="<?=$row["Cars_marque"]?>" data-prix="<?=$row["Cars_prix"]?>">
 
                 <div class="image-car hide-1">
                     <img src="images/<?= $row["Cars_image"]?>" alt="">

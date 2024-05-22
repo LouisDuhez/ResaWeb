@@ -47,8 +47,9 @@ foreach($Cars as $cars){
 
             </div>
             <div class="bloc-prix">
-                <p>Prix : <span class="red-text"><?=$cars["Cars_prix"]?></span> /Jour</p>
+                <p>Prix : <span class="red-text number"><?=$cars["Cars_prix"]?></span> € /Jour</p>
             </div>
+            <div class="btn-reserv"><a class="reserv-cars" href="Reservation.php?id=<?=$cars["Cars_id"]?>">Réserver <?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?> </a></div>
         </div>
                 </div>
                 <div class="js-slider">
@@ -125,8 +126,9 @@ foreach($Cars as $cars){
         </div>
         
     </div>
+    <div class="btn-reserv"><a class="reserv-cars" href="Reservation.php?id=<?=$cars["Cars_id"]?>">Réserver <?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?> </a></div>
     </main>
-    <script src="slider.js"></script>
+    
     <footer class="hide">
         <div class="trait"></div>
         <div class="list-footer">
@@ -162,7 +164,9 @@ foreach($Cars as $cars){
     <?php
  } 
 ?>
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 <script src="allScript.js"></script>
+<script src="slider.js"></script>
 </body>
 </html>
 

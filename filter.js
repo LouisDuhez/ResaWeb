@@ -9,7 +9,7 @@ let voitureCards = document.querySelectorAll(".car-card");
 searchBar.addEventListener('keyup', (e) => {
 
   /* on récupère la lettre recherchée que l'on stocke dans une nouvelle variable searchedLetters */
-let searchedLetters = e.target.value;
+let searchedLetters = e.target.value.toLowerCase();
 voitureCards
 /* Ensuite, on applique une fonction de tri en utilisant searchedLetters et cards comme entrées afin de les comparer. */
   filterElements(searchedLetters, voitureCards);
@@ -78,3 +78,93 @@ marques.addEventListener('click' , (e)=> {
     }
 });
     
+/* trier par prix */
+let prix = document.querySelector("#prix");
+let listCars = document.querySelector(".cars-wrapper")
+prix.addEventListener("click", (e)=> {
+  let option_prix_selected = prix.options.selectedIndex;
+  let prix_selected = prix.options[option_prix_selected].value;
+  console.log(prix_selected)
+  triPrix (prix_selected,listCars)
+  document.querySelectorAll(".car-card").forEach((elements=> {
+    elements.classList.add("reveal")
+  }))
+  
+})
+
+function triPrix(option){
+
+    // Étape 1 : Mettre les éléments HTML dans un tableau
+  let tableauCars = [];
+  //Sélectionner tous les éléments des cards
+  let balisesCars = document.querySelectorAll(".car-card")
+  // Mettre tous les éléments li dans le tableau tableauCars
+  balisesCars.forEach(function(baliseCars){
+    // ajouter baliseFilm dans la bonne case de tableauCars
+    tableauCars.push(baliseCars);
+  })
+  // Étape 2 : Trier le tableau par prix de voiture
+  if (option === "ASC") {
+    tableauCars.sort(function(baliseCars1,baliseCars2){
+      // On utilise les data-attributes prix des balises
+      // pour la fonction de comparaison
+      let prix1 = parseInt(baliseCars1.dataset.prix)
+      let prix2 = parseInt(baliseCars2.dataset.prix)
+      if( prix1 < prix2 ){return -1}
+      if( prix1 == prix2 ){return 0}
+      if( prix1 > prix2 ){return 1}
+      
+    })
+  }
+  else if (option === "DESC") {
+    tableauCars.sort(function(baliseCars1,baliseCars2){
+      // On utilise les data-attributes prix des balises
+      // pour la fonction de comparaison
+      let prix1 = parseInt(baliseCars1.dataset.prix)
+      let prix2 = parseInt(baliseCars2.dataset.prix)
+      if( prix1 < prix2 ){return 1}
+      if( prix1 == prix2 ){return 0}
+      if( prix1 > prix2 ){return -1}
+      
+    })
+  }
+  // Étape 3.1 : Vider la liste des voitures
+  document.querySelector(".cars-wrapper").innerHTML = "";
+  // Étape 3.2 : Remettre les éléments HTML du tableau dans la page web
+  tableauCars.forEach(function(baliseHTMLCars){
+    // Ajouter à la fin du code HTML de la liste des voitures
+    // le code HTML stocké dans la case du tableau visitée :
+    document.querySelector(".cars-wrapper").innerHTML += baliseHTMLCars.outerHTML;
+  })
+}
+
+
+
+
+
+
+/*test trie par prix (fonctionne pas)*/
+// function triPrix(option, elements) {
+//   let tabprice = 0
+//     for (let i = 0; i < elements.length; i++){
+//       if(option === "DESC") {
+//         if(elements[i].dataset["prix"] > elements[i + 1].dataset["prix"]) {
+//           return tabprice = (elements[i].innerHTML)
+//         }
+//         else {
+//           return tabprice = (elements[i + 1].innerHTML)
+//         }
+//       }
+//       if(option === "ASC") {
+//         if(elements[i].dataset["prix"] < elements[i + 1].dataset["prix"]) {
+//           return tabprice = (elements[i].innerHTML)
+//         }
+//         else {
+//           return tabprice = (elements[i + 1].innerHTML)
+//         }
+//       }
+//       elements.innerHTML =""
+//       elements.innerHTML = elements.innerHTML + tabprice
+//     }
+  
+// }
