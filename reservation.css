@@ -1,2 +1,97 @@
 @import url(allstyle.css);
+:root {
+    --formWidth : 500px
+}
+main h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 2rem;
+}
+form {
+    width: 500px;
+    background-color: #3A3A3A;
+    padding: 25px 25px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+label {
+    margin-bottom: 10px;
+}
+form input, form textarea {
+    font-size: 1.125rem;
+}
+form input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #E02B20;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+input[type="submit"] {
+    background-color: #E02B20;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                #E02B20 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+}
+form select {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #E02B20;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+form select option {
+    color: black;
+}
+.submit {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 16px;
+    border: #E02B20 2px solid;
+    margin-top: 15px;
+}
+.trait-blanc {
+    margin-top: 10px;
+    height: 2px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+  }

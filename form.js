@@ -10,10 +10,10 @@ email_selected.addEventListener('keyup', (e=> {
 }))
 function emailTempDetection (inputselect, email, emailTemp) {
   emailDetected = email.split('@')[1]
-  if (emailTemp.includes(emailDetected) == true) {
-    inputselect.style.backgroundColor = "red";
+    if (emailTemp.includes(emailDetected) == true) {
+      inputselect.style.backgroundColor = "red";
+    }
+    else {
+      inputselect.style.backgroundColor = "green"
+    }
   }
-  else {
-    inputselect.style.backgroundColor = "green"
-  }
-}

@@ -79,7 +79,14 @@
             <div class="scroller__inner">
                 
                     <?php
-                    $Avistotal= "SELECT * FROM rw_clients_avis AS avis";
+                    $Avistotal= "SELECT *, Clients_nom, Clients_prenom 
+                    FROM rw_clients_avis
+                    INNER JOIN rw_clients 
+                    ON rw_clients_avis.Numclients = rw_clients.Clients_id
+                    WHERE valid = 1
+                    GROUP BY Clients_nom
+
+                    ";
                     $avis = $db->query($Avistotal);
                     $avisResult = $avis->fetchall(PDO::FETCH_ASSOC);
                     foreach ($avisResult as $row) {
@@ -87,10 +94,10 @@
                     <div class="avis-card">
                     <div class="top-card">
                     <i class="fa-solid fa-user"></i>
-                        <p><?=$row["clients_avis_nom"]?> <?=$row["clients_avis_prenom"]?></p>
+                        <p><?=$row["Clients_nom"]?> <?=$row["Clients_prenom"]?></p>
                     </div>
                     <div class="avis">
-                        <p><?=$row["clients_avis_text"]?></p>
+                        <p><?=$row["clients_avis_text"]?></p> 
                     </div>
                     </div>
                     <?php 
@@ -111,7 +118,7 @@
             <label for="email">Votre E-mail</label><br>
             <input type="email" id="email" required name="email"><br>
             <label for="avis">Votre Avis<br>
-            <textarea required id="avis" cols="30" rows="10" maxlength="150" name="avi"></textarea><br>
+            <textarea required id="avis" cols="30" rows="5" maxlength="150" name="avi"></textarea><br>
             <input class="submit"type="submit" value="Envoyer" name="envoyer">
             <div class="trait-blanc"></div>
         </form>

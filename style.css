@@ -589,10 +589,6 @@ body {
   font-size: 2rem;
 }
 
-.avis-formulaire input {
-  margin-bottom: 15px;
-}
-
 .avis-formulaire .trait-blanc {
   margin-top: 10px;
 }
@@ -603,18 +599,58 @@ form {
   width: fit-content;
 
 }
+form input, form textarea {
+  font-size: 1.125rem;
+}
 form input {
-  background-color: transparent;
-  color: white;
-  border: none;
-  border-bottom: #E02B20 2px solid;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 28px;
+  padding: 8px 16px;
+  width: 100%;
+  min-height: 44px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: #E02B20;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+input[type="submit"] {
+  background-color: #E02B20;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+              #E02B20 0px 0px 0px 1px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }
 form textarea {
-  background-color: transparent;
-  color: white;
-  border: none;
-  border: #E02B20 2px solid;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 28px;
+  padding: 8px 16px;
+  width: 100%;
+  border: unset;
   border-radius: 4px;
+  outline-color: #E02B20;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+              rgba(0, 0, 0, 0) 0px 0px 0px 0px;
 }
 .avis-formulaire:hover {
   border: #E02B20 solid 3px;
