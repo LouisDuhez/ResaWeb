@@ -48,7 +48,21 @@
                     <input class="email" id="email" type="text" name="email"required><br>
                     <div class="form-top-voiture">
                         <h3>Quel voiture ?</h3>
-                        <p class="prix-voiture"></p>
+                        <p>
+                            Prix : <span class=" red-text prix-voiture">
+                                <?php
+                                $requete= "SELECT Cars_prix FROM rw_cars WHERE Cars_id = {$_GET["id"]}";
+                                $cars = $db->query($requete);
+                                $result = $cars->fetchall(PDO::FETCH_ASSOC);
+                                foreach ($result as $row) {
+                                ?>
+                                    <?= $row["Cars_prix"]?>
+                                <?php
+                                };
+                                ?>
+                            </span>€
+                            
+                        </p>
                     </div>
                     <label for="voiture" >Réserver</label><br>
                     <select name="voiture" id="voiture" required><br>
@@ -61,7 +75,7 @@
                     ?>
                 
                 
-                        <option <?=$selected ?> value="<?= $row["Cars_id"]?>"><?= $row["Cars_marque"]?> <?= $row["Cars_nom"]?></option>
+                        <option <?=$selected ?> value="<?= $row["Cars_id"]?>" data-prix="<?= $row["Cars_prix"]?>"><?= $row["Cars_marque"]?> <?= $row["Cars_nom"]?></option>
                         <?php
                     }
                     ?>

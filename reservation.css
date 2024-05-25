@@ -16,7 +16,15 @@ form {
     margin-left: auto;
     margin-right: auto;
 }
+.form-top-voiture {
+    display: flex;
+    justify-content: space-between;
 
+}
+.form-top-voiture p {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
 label {
     margin-bottom: 10px;
 }

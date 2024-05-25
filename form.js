@@ -17,3 +17,16 @@ function emailTempDetection (inputselect, email, emailTemp) {
       inputselect.style.backgroundColor = "green"
     }
   }
+
+let formSelect = document.querySelector('#voiture')
+let formOption = formSelect.options
+let prix = document.querySelector(".prix-voiture")
+
+formSelect.addEventListener("click", (e =>{
+  prixSelected(formOption, prix)
+}))
+function prixSelected(option,element) {
+  let prix_selected = option.selectedIndex
+  
+  element.innerHTML = option[prix_selected].dataset.prix
+}

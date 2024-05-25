@@ -4,6 +4,7 @@ $nom = htmlspecialchars($_GET["nom"]);
 $prenom = htmlspecialchars($_GET["prenom"]);
 $email = htmlspecialchars($_GET["email"]);
 $voiture = htmlspecialchars($_GET["voiture"]);
+$date =($_GET["date"]);
 
 $verifclient = "SELECT COUNT(*) AS verif FROM rw_clients WHERE Clients_nom = '$nom' AND Clients_prenom ='$prenom' AND Clients_mail ='$email'";
 $verif = $db->query($verifclient);
@@ -18,18 +19,18 @@ if ($result["verif"] == 0) {
     $db->query($requete);
 
     $requeteLocations = "
-    INSERT INTO rw_locations (fk_cars, fk_clients)
-    VALUES ('$voiture',(SELECT Clients_id FROM rw_clients ORDER BY Clients_id DESC LIMIT 1))";
+    INSERT INTO rw_locations (fk_cars, fk_clients,loca_date_debut,loca_prix)
+    VALUES ('$voiture',(SELECT Clients_id FROM rw_clients ORDER BY Clients_id DESC LIMIT 1),'$date',(SELECT Cars_prix FROM rw_cars WHERE $voiture = Cars_id))";
     $db->query($requeteLocations);
 }
 else {
     $requeteLocations = "
-    INSERT INTO rw_locations (fk_cars, fk_clients)
-    VALUES ('$voiture',(SELECT Clients_id FROM rw_clients ORDER BY Clients_id DESC LIMIT 1))";
+    INSERT INTO rw_locations (fk_cars, fk_clients,loca_date_debut,loca_prix)
+    VALUES ('$voiture',(SELECT Clients_id FROM rw_clients ORDER BY Clients_id DESC LIMIT 1),'$date',(SELECT Cars_prix FROM rw_cars WHERE $voiture = Cars_id))";
     $db->query($requeteLocations);
 }
 
 
 
-header('Location:http://localhost/SAE_RESAWEB/index.php?#avis-formulaire')
+// header('Location:http://localhost/SAE_RESAWEB/index.php?#avis-formulaire')
 ?>
