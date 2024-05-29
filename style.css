@@ -3,12 +3,12 @@ body {
   color: #08100C;
 }
 .Accueil {
-  margin-top: 25px;
+  margin-top: 70px;
   display: flex;
   width: 90%;
   margin-right: auto;
   margin-left: auto;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 

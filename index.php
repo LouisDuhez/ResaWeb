@@ -11,7 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        
+        <link rel="icon" href="images/SVG/Todrive.svg" />
     <title>Accueil - To Drive</title>
 </head>
 
@@ -24,10 +25,12 @@
         <nav>
             <h1><a href="#top">To drive</a></h1>
             <a class="btn-nav" href="voitures.php">Voitures</a>
+            <a class="btn-nav" href="#team">À propos</a>
+            
         </nav>
         <div class="Accueil">
             <div class="Logo-and-Join">
-                <img src="images/logo_test.svg" alt="">
+                <img src="images/SVG/Todrive.svg" alt="">
                 <a class="btn-Join-Us" href="#team">
                     Qui sommes nous ?
                     <div class="icon">
@@ -168,23 +171,20 @@
             </div>
             <div class="to-drive-presentation hide">
                 <h3 class="hide-1 right-transition">Pourquoi <span class="red-text">To Drive</span> ?</h3>
-                <p class="hide-3 right-transition">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque optio
-                    possimus quas laboriosam omnis alias eaque, fuga ut, ipsam velit recusandae consectetur itaque.
-                    Perspiciatis ea aliquid maxime nemo placeat saepe, sint beatae unde cumque labore dicta veniam
-                    reprehenderit at velit quia corporis ratione ex atque sit quos quidem possimus aliquam.</p>
+                <p class="hide-3 right-transition">Choisir To Drive pour la location de voitures de luxe, c'est opter pour une expérience incomparable grâce à une flotte de véhicules prestigieux, un service client personnalisé, et des voitures en parfait état. To Drive propose des options de location flexibles à des tarifs compétitifs, assurant ainsi un accès abordable au luxe sans compromis sur la qualité. Avec des avis clients élogieux et des services incluant la livraison et la récupération des véhicules, chaque trajet devient un moment mémorable. Pour une expérience de conduite exceptionnelle, To Drive est le choix idéal.</p>
                 <div class="slider-avis hide">
                     <h2 class="red-text right-transition hide-1">FAQ</h2>
                     <details class="first-details">
-                        <summary>D'ou viennent les voitures ?</summary>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum accusamus nobis ab unde sed odio quibusdam deleniti doloribus nam!
+                        <summary>D'où viennent les voitures ?</summary>
+                        Choisir To Drive pour la location de voitures de luxe, c'est opter pour une expérience incomparable grâce à une flotte de véhicules prestigieux, stockés en France dans notre propre entrepôt à Paris. Cela garantit une disponibilité immédiate et un entretien rigoureux. Avec un service client personnalisé, des options de location flexibles, et des tarifs compétitifs, nous offrons un accès abordable au luxe sans compromis sur la qualité. 
                     </details>
                     <details>
-                        <summary>Comment ce passe la location ?</summary>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum accusamus nobis ab unde sed odio quibusdam deleniti doloribus nam!
+                        <summary>Comment se passe la location ?</summary>
+                        Pour vous, la location d'une voiture est simple : choisissez votre véhicule, réservez en fournissant vos informations, récupérez la voiture à l'endroit convenu avec vos documents requis, et partez en toute tranquillité. À la fin de la location, restituez le véhicule au même endroit, et après un bref contrôle, récupérez votre caution sur votre carte de crédit. Chez nous, votre satisfaction est notre priorité.
                     </details>
                     <details>
                         <summary>Comment procéder au paiement ?</summary>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorum accusamus nobis ab unde sed odio quibusdam deleniti doloribus nam!
+                        Pour régler votre location, rendez-vous simplement à notre agence de location à l'heure convenue. Sur présentation de votre carte de crédit ou en espèces, notre équipe vous aidera à finaliser le paiement. Vous recevrez un reçu et toutes les informations nécessaires pour votre location. Notre personnel est là pour vous assister à chaque étape, garantissant ainsi une expérience de paiement simple et transparente.
                     </details>
                     <p>Si vous avez d'autre question n'hésité pas à nous contacter :<br> <a href="mailto:louis.duhez@gmail.com">louis.duhez@gmail.com</a></p>
                 </div>

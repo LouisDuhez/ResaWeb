@@ -9,14 +9,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="images/SVG/Todrive.svg" />
 </head>
 
 <body>
     <header>
         <nav>
             <h1><a href="index.php">To drive</a></h1>
-            <a class="btn-nav" href="index.php">Accueil</a>
             <a class="btn-nav" href="voitures.php">Voitures</a>
+            <a class="btn-nav" href="index.php#team">À propos</a>
+
         </nav>
     </header>
     <main>
@@ -35,25 +37,13 @@
             <p>Tél :07 89 00 09 21</p>
             <p>louis.duhez@gmail.com</p>
             <h2 id="location">Location</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nemo aliquid, illo sunt quo omnis delectus in unde
-                repudiandae nulla perspiciatis aliquam quibusdam commodi quam cum est repellendus ex quas ullam fugit
-                praesentium quae adipisci. Consectetur doloremque cupiditate ad doloribus voluptatem soluta maxime sapiente et.
-                Omnis aliquam quam eaque itaque!</p>
+            <p>To Drive vous propose une sélection exclusive de voitures de luxe pour répondre à vos besoins en matière de transport. Que ce soit pour une occasion spéciale ou simplement pour le plaisir, nous avons le véhicule parfait pour vous.</p>
             <h2 id="tarifs">Tarifs</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis eius, minima optio sunt doloremque laudantium
-                iure? Veritatis excepturi voluptate ipsam deserunt debitis repellendus fugit sit placeat non, eius illum
-                assumenda deleniti eaque velit nemo vero ut expedita labore aspernatur rerum? Dignissimos, nam iusto. Sequi, in.
-                Dolores nemo odio quibusdam?</p>
+            <p> Nos tarifs de location sont compétitifs et transparents. Nous proposons des options flexibles pour répondre à vos besoins, que ce soit pour une courte durée ou une location à long terme. Pour connaître nos tarifs actuels et nos offres spéciales, consultez notre site web ou contactez-nous directement.</p>
             <h2 id="Mentions-légales">Mentions Légales</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam consequuntur eius sapiente iusto tempore
-                quidem iure aperiam qui alias, necessitatibus veniam, aut dicta, dolore perferendis inventore. Ullam illo sit
-                perspiciatis, numquam ea laudantium necessitatibus suscipit quo? Placeat accusamus, consequuntur perspiciatis,
-                possimus vero dicta tempore fugiat deleniti, totam nam architecto ipsam.</p>
+            <p>To Drive est une société enregistrée conforme aux lois en vigueur. Toutes nos locations sont soumises à nos conditions générales, disponibles sur demande. Nous nous engageons à respecter les lois et réglementations locales en matière de location de véhicules.</p>
             <h2 id="politique">Politique de confidentialité</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam culpa, consequatur error, velit dolor expedita
-                veniam voluptates quasi iste sint blanditiis omnis? Itaque assumenda, vero, illum aperiam nulla beatae eos
-                consequuntur eligendi molestias, pariatur quaerat! Fuga debitis ipsum possimus tempore porro! Blanditiis cumque
-                dignissimos aperiam repellat consectetur optio nostrum culpa?</p>
+            <p>Chez To Drive, nous accordons une grande importance à la protection de vos données personnelles. Notre politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez nos services. Nous nous engageons à respecter votre vie privée et à utiliser vos données uniquement dans le cadre de la prestation de nos services de location de voitures de luxe.</p>
         </ml-information>
     </main>
     <script src="allScript.js"></script>

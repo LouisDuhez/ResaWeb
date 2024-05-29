@@ -18,6 +18,7 @@ foreach($Cars as $cars){
     <link
     href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet"> 
+    <link rel="icon" href="images/SVG/Todrive.svg" />
     <title><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?> - TO Drive</title>
 </head>
 <body>
@@ -25,19 +26,18 @@ foreach($Cars as $cars){
     <a href="#main" class="skip">Skip to main content</a>
         <nav>
             <h1><a href="index.php">To drive</a></h1>
-            <a class="btn-nav" href="index.php">Accueil</a>
             <a class="btn-nav" href="voitures.php">Voitures</a>
+            <a class="btn-nav" href="index.php#team">À propos</a>
         </nav>
     </header>
     <main id="main">
         <div>
-            <div class="plan-site">
-                <p><a href="index.php">Accueil</a> <span class="red-text">></span> <a href="voitures.php"> Voitures</a> <span class="red-text">></span><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></p>
+            <div class="plan-site hide">
+                <p class="hide-1 left-transition"><a href="index.php">Accueil</a> <span class="red-text">></span> <a href="voitures.php"> Voitures</a> <span class="red-text">></span><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></p>
             </div>
-            <div class="title-slider">
-                <div class="tittle-main">
-                    <h1 class="red-text"><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></h1>
-                    <div class="bloc-info">
+                <div class="tittle-main hide">
+                    <h1 class="red-text hide-2 left-transition"><?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?></h1>
+            <div class="bloc-info hide-3 left-transition">
                 <div class="info">
                 <p>02/2023</p>
                 <div class="traitRouge"></div>
@@ -52,32 +52,15 @@ foreach($Cars as $cars){
             <div class="btn-reserv"><a class="reserv-cars" href="Reservation.php?id=<?=$cars["Cars_id"]?>">Réserver <?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?> </a></div>
         </div>
                 </div>
-                <div class="js-slider">
-            
-                <div class="js-photos">
-                    <div class="js-photo green-darker">
-                        <img src="images/<?= $cars["Cars_image"]?>" alt="">
-                    </div>
-                    <div class="js-photo green">
-                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
-                    </div>
-                    <div class="js-photo green-dark">
-                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
-                    </div>
-                    <div class="js-photo green-darker">
-                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
-                    </div>
-                    <div class="js-photo green">
-                    <img src="images/<?= $cars["Cars_image"]?>" alt="">
-                    </div>
-                </div>
+                
             </div>
             </div>
         </div>
     </div>
-    <div class="information-voiture-bloc">
+    <div class="scroll-down"></div>
+    <div class="information-voiture-bloc hide">
         
-        <div class="desc">
+        <div class="desc hide-1 left-transition">
             <table>
                 <caption><h3>Caractéristiques techniques :</h3></caption>
                 <tr>
@@ -114,19 +97,20 @@ foreach($Cars as $cars){
                 </tr>
             </table>
         </div>
-        <div class="image image1">
+        <div class="image image1 hide-1 right-transition">
             <img src="images/<?= $cars["Cars_image2"]?>" alt="">
         </div>
-        <div class="image image2">
+        <div class="image image2 hide-2 left-transition">
         <img src="images/<?= $cars["Cars_image3"]?>" alt="">
         </div>
-        <div class="caracteristique">
+        <div class="caracteristique hide-2 right-transition">
             <h2><span class="red-text">Histoire</span></h2>
             <p><?=$cars["Cars_desc"]?></p>
         </div>
         
     </div>
-    <div class="btn-reserv"><a class="reserv-cars" href="Reservation.php?id=<?=$cars["Cars_id"]?>">Réserver <?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?> </a></div>
+    <h2 class="reserv-tittle">Réserver l'excellence :</h2>
+    <div class="btn-reserv "><a class="reserv-cars" href="Reservation.php?id=<?=$cars["Cars_id"]?>">Réserver <?= $cars["Cars_marque"]?> <?= $cars["Cars_nom"]?> </a></div>
     </main>
     
     <footer class="hide">

@@ -8,25 +8,54 @@ email_selected.addEventListener('keyup', (e=> {
     email = email_selected.value
     emailTempDetection(email_selected, email, emailTemp)
 }))
+
+let form = document.querySelector('form')
+form.addEventListener("submit", (e => {
+  if (emailTempDetection (email_selected, email, emailTemp)== true) {
+    e.preventDefault() // Pour désactiver l'envoie des données 
+    alert('Les emails temporaires ne sont pas autorisés.')
+  }
+}))
 function emailTempDetection (inputselect, email, emailTemp) {
   emailDetected = email.split('@')[1]
     if (emailTemp.includes(emailDetected) == true) {
-      inputselect.style.backgroundColor = "red";
+      inputselect.style.borderBottom = "solid 3px red"
+      document.querySelector('.erreur').innerHTML ="Erreur email temporaire"
+      document.querySelector('.erreur').style.color="red"
+      return true
     }
     else {
-      inputselect.style.backgroundColor = "green"
+      document.querySelector('.erreur').innerHTML =""
+      return false
     }
   }
 
+
+
+
+
+
+let formVoiture = document.querySelectorAll('select')
 let formSelect = document.querySelector('#voiture')
 let formOption = formSelect.options
+let formSelect2 = document.querySelector('#voiture2')
+let formOption2 = formSelect2.options
 let prix = document.querySelector(".prix-voiture")
 
-formSelect.addEventListener("click", (e =>{
-  prixSelected(formOption, prix)
+formVoiture.forEach((e=> {
+  e.addEventListener("click", (e =>{
+    prixSelected(formOption, formOption2, prix)
+  }))
 }))
-function prixSelected(option,element) {
+function prixSelected(option,option2,element) {
   let prix_selected = option.selectedIndex
-  
-  element.innerHTML = option[prix_selected].dataset.prix
+  let prix_selected2 = option2.selectedIndex
+  element.innerHTML = parseInt(option[prix_selected].dataset.prix) + parseInt(option2[prix_selected2].dataset.prix) + " "
 }
+
+let AjoutvoitureBtn = document.querySelector("#Ajoutvoiture")
+
+AjoutvoitureBtn.addEventListener("click", (e => {
+  document.querySelector(".voiture2").style.display ="block"
+  AjoutvoitureBtn.style.display= "none"
+}))
