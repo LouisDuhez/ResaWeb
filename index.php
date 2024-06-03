@@ -144,6 +144,7 @@
         ?>
             <div class="card-explication supercars-js" data-id="<?= $row["Cars_id"] ?>">
                 <div class="card-wrapper hide-1 left-transition">
+                    <!-- Mauvaise pratique mais pas le temps de trouver une solution plus propre -->
                     <div class="card card-voiture" style="background-image: url(images/<?= $row["Cars_image"]?>);">
                         <div class="card-background">
                             <h3><?= $row["Cars_nom"]?></h3>

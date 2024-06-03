@@ -80,6 +80,11 @@ nav {
     border-bottom: 2px solid #08100C;
 
 }
+.plan-site {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .plan-site p a{
   color: #FBFBFB;
   text-decoration: none;
@@ -110,7 +115,7 @@ nav a {
   color: white;
 }
 main {
-    width: 90%;
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 100px;
@@ -120,11 +125,16 @@ main {
 main .tittle-main h1 {
     font-size: 4rem;
     margin:0px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 .tittle-main p {
     margin: 0px;
     
+}
+.tittle-main {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* footer*/
@@ -227,8 +237,9 @@ footer h2 {
 /* flèche de scroll */
 .scroll-down {
   position: relative;
-  left: 50%;
-  top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20px;
   display: block;
   text-align: center;
   z-index: 100;
@@ -239,7 +250,6 @@ footer h2 {
   border-bottom: 4px solid #fff;
   border-right: 4px solid #fff;
   z-index: 9;
-  left: 50%;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);

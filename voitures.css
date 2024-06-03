@@ -1,19 +1,32 @@
 @import url(allstyle.css);
 
 .filtre {
+  margin-left: auto;
+  margin-right: auto;
     margin-top: 80px;
-    display: flex;
-    justify-content: space-around;
     font-size: 1.5rem;
-    max-width: 1450px;
-    flex-wrap: wrap;
+    width: 90%;
 }
 .filtre div select{
-  color: #FBFBFB;
-  background-color: transparent;
-  font-size: 1.5rem;
-  border: none;
-  border-bottom: #E02B20 2px solid;
+  font-weight: bold;
+    font-size: 1.125rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #E02B20;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
 }
 .filtre div select option {
   color: #08100C;
@@ -23,16 +36,16 @@
   margin-right: auto;
   margin-left: auto;
 
-  width: 100%;
+  width: 90%;
   height: auto;
   display: grid;
   justify-content: center;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fill, 650px);
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
 }
 .car-card {
+  width: 100%;
   margin-top: 50px;
-  width: 600px;
   padding-bottom: 25px;
   border-bottom: 3px #FBFBFB solid;
 }
@@ -120,11 +133,25 @@
   }
 }
 .searchbar {
-  font-size: 1.5rem;
-  background-color: transparent;
-  border: none;
-  border-bottom: #E02B20 solid 3px;
-  color: #FBFBFB;
+  font-weight: bold;
+    font-size: 1.125rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #E02B20;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
 }
 
 .red-text {

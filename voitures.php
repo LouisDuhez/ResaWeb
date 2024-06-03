@@ -43,6 +43,10 @@
         ?>
         <div class="filtre hide">
             <div>
+                <div class="search">
+                    <label class="hide-1" for="searchbar">Rechercher :</label>
+                    <input id="searchbar" type="text" class="searchbar hide-1">
+                </div>
                 <label class="hide-1" for="marques">Filtrer par marques :</label>
                 <select class="hide-1" name="marques" id="marques">
                 <option value="all">Toutes les marques</option>
@@ -64,10 +68,7 @@
                     <option value="ASC">Croissant</option>
                 </select>
             </div>
-            <div class="search">
-                <label class="hide-1" for="searchbar">Rechercher :</label>
-                <input id="searchbar" type="text" class="searchbar hide-1">
-            </div>
+            
         </div>
         <div class="scroll-down"></div>
         <div class="cars-wrapper">
