@@ -159,7 +159,9 @@
 
 
     </footer>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <script src="form.js"></script>
     <script src="allScript.js"></script>
+    
 </body>
 </html>

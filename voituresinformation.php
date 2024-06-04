@@ -2,7 +2,15 @@
 /*On lie la base de donné*/
 include("connect.php");
 /*On selectionne la voiture en fonction de l'id contenue dans la requete*/
-$requete= "SELECT * FROM `rw_cars` WHERE Cars_id={$_GET["id"]}";
+if(isset($_GET["valider"])) {
+    $str = htmlspecialchars($_GET["keywords"]);
+    $requete = "SELECT * FROM rw_cars WHERE Cars_nom LIKE '$str'";
+    
+}
+else {
+    $requete= "SELECT * FROM `rw_cars` WHERE Cars_id={$_GET["id"]}";
+}
+
 $stmt=$db->query($requete);
 $Cars=$stmt->fetchall(PDO::FETCH_ASSOC);
 foreach($Cars as $cars){
@@ -73,7 +81,7 @@ foreach($Cars as $cars){
                 </tr>
                 <tr>
                     <th>Kilométrage :</th>
-                    <td><?= $cars["Cars_kilo"]?></td>
+                    <td><?= $cars["Cars_kilo"]?> km</td>
                 </tr>
                 <tr>
                     <th>Nombre de place :</th>
@@ -81,7 +89,7 @@ foreach($Cars as $cars){
                 </tr>
                 <tr>
                     <th>Puissance DIN :</th>
-                    <td><?= $cars["Cars_ch"]?></td>
+                    <td><?= $cars["Cars_ch"]?>ch</td>
                 </tr>
                 <tr>
                     <th>Boite de vitesse :</th>

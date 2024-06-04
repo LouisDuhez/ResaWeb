@@ -13,7 +13,7 @@ body {
 }
 
 .Logo-and-Join img {
-  max-width: 600px;
+  max-width: 300px;
   width: 100%;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .Slogan {
-  width: 49%;
+  width: 40%;
 }
 
 .Slogan h1 {
@@ -76,19 +76,6 @@ body {
   line-height: 1.6;
   color: #08100C;
 }
-
-@media (max-width:900px) {
-  .Accueil {
-    flex-flow: column-reverse;
-  }
-
-  .Slogan {
-    width: 90%;
-  }
-
-}
-
-
 
 /*Animation flèche de scroll*/
 @-webkit-keyframes fade_move_down {
@@ -223,43 +210,6 @@ body {
   margin-right: auto;
 }
 
-@media screen and (max-width:1455px) {
-  .part1 {
-    flex-flow: column;
-    align-items: center;
-    gap: 50px;
-
-  }
-
-  .part1-number {
-    text-align: center;
-  }
-
-}
-
-
-
-
-
-
-/* Un peu d'adaptation en fonction de la taille du navigateur */
-@media screen and (max-width:1300px) {
-  .cards-container {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width:930px) {
-  .cards-container {
-    width: 100%;
-  }
-
-  .text-navigation {
-    width: 50%;
-  }
-}
-
-
 
 /* Navigation avec les cartes */
 
@@ -289,9 +239,12 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
-.card-explication {
+.list-navigation a {
   width: 30%;
+  text-decoration: none;
+}
+.card-explication {
+  width: 100%;
 }
 
 .explication-off {
@@ -314,7 +267,6 @@ body {
   top: 0px;
   opacity: 1;
   transition: 0.5s;
-  background-color: #FBFBFB;
 }
 
 .explication-on p {
@@ -389,28 +341,7 @@ body {
   scale: 1.2;
 }
 
-/* on fait passer en colone la liste*/
-@media screen and (max-width: 1300px) {
-  .list-navigation {
-    flex-flow: column;
-    gap: 50px;
-    align-items: center;
-  }
-  .card-explication {
-    width: 80%;
-  }
-  .profil-list-card {
-    flex-flow: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .profil-card {
-    width: 50% !important;
-  }
-  .to-drive-presentation {
-    width: 80%;
-  }
-} 
+
 .section-profil-card {
   width: 85%;
   margin-left: auto;
@@ -724,4 +655,69 @@ details[open]{
 .submit:hover {
   box-shadow: inset 300px 0 0 0 #E02B20;
   color: white;
+}
+
+@media (max-width:900px) {
+  .Accueil {
+    flex-flow: column-reverse;
+  }
+
+  .Slogan {
+    width: 90%;
+  }
+
+}
+
+/* on fait passer en colone la liste*/
+@media screen and (max-width: 1000px) {
+  .list-navigation {
+    flex-flow: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .list-navigation a {
+    width: 80%;
+  }
+  .profil-list-card {
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .profil-card {
+    width: 50% ;
+  }
+  .to-drive-presentation {
+    width: 80%;
+  }
+} 
+
+/* Un peu d'adaptation en fonction de la taille du navigateur */
+@media screen and (max-width:1300px) {
+  .cards-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:930px) {
+  .cards-container {
+    width: 100%;
+  }
+
+  .text-navigation {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:1455px) {
+  .part1 {
+    flex-flow: column;
+    align-items: center;
+    gap: 50px;
+
+  }
+
+  .part1-number {
+    text-align: center;
+  }
+
 }

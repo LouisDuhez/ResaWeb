@@ -26,7 +26,6 @@
             <h1><a href="#top">To drive</a></h1>
             <a class="btn-nav" href="voitures.php">Voitures</a>
             <a class="btn-nav" href="#team">À propos</a>
-            
         </nav>
         <div class="Accueil">
             <div class="Logo-and-Join">
@@ -71,6 +70,10 @@
         <div class="part1-number hide">
             <h3 class="hide-1 right-transition">+ <span class="number red-text"><?= $row["nbcars"] ?></span><br>Voitures disponibles</h3>
         </div>
+        <form method="GET" name="recherche" action="voituresinformation.php">
+                <input type="text" name="keywords" placeholder="Mots-clés">
+                <input type="submit" name="valider" value="recherche">
+            </form>
         <?php
             };
         ?>
@@ -142,20 +145,21 @@
         $result = $cars->fetchall(PDO::FETCH_ASSOC);
         foreach ($result as $row) {
         ?>
-            <div class="card-explication supercars-js" data-id="<?= $row["Cars_id"] ?>">
-                <div class="card-wrapper hide-1 left-transition">
-                    <!-- Mauvaise pratique mais pas le temps de trouver une solution plus propre -->
-                    <div class="card card-voiture" style="background-image: url(images/<?= $row["Cars_image"]?>);">
-                        <div class="card-background">
-                            <h3><?= $row["Cars_nom"]?></h3>
+            <a href="voituresinformation.php?id=<?= $row["Cars_id"]?>"><span class="sr-only">Voir plus <?= $row["Cars_nom"]?> <?= $row["Cars_marque"]?></span>
+                <div class="card-explication supercars-js" data-id="<?= $row["Cars_id"] ?>">
+                    <div class="card-wrapper hide-1 left-transition">
+                        <!-- Mauvaise pratique mais pas le temps de trouver une solution plus propre -->
+                        <div class="card card-voiture" style="background-image: url(images/<?= $row["Cars_image"]?>);">
+                            <div class="card-background">
+                                <h3><?= $row["Cars_nom"]?></h3>
+                            </div>
                         </div>
                     </div>
+                    <div class="explication-off">
+                        <h3 class="red-background"><?= $row["Cars_marque"]?> <?= $row["Cars_nom"]?></h3>
+                    </div>
                 </div>
-                <div class="explication-off">
-                    <h3 class="red-background"><?= $row["Cars_marque"]?> <?= $row["Cars_nom"]?></h3>
-                    <p><a href="voituresinformation.php?id=<?= $row["Cars_id"]?>">Voir plus <span class="sr-only"><?= $row["Cars_nom"]?> <?= $row["Cars_marque"]?></span></a>  </p>
-                </div>
-            </div>
+            </a>
         <?php 
         }
         ?>

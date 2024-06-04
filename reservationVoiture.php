@@ -53,12 +53,11 @@ else {
 };
 
 //Mail : 
-$nbtotal = "SELECT Cars_nom, Cars_marque, Cars_prix FROM rw_cars WHERE Cars_id = " . $_GET['voiture'];
+$nbtotal = "SELECT Cars_nom, Cars_marque, Cars_prix FROM rw_cars WHERE Cars_id = " . $_GET['voiture']. " OR" . $_GET['voiture2'];
 $nbcars = $db->query($nbtotal);
 $result = $nbcars->fetchAll(PDO::FETCH_ASSOC);
 
 // Pour chaque résultat
-foreach ($result as $row) {
 
     // Informations de l'email
     $destinataire = "$email";
@@ -67,7 +66,7 @@ foreach ($result as $row) {
     // Message HTML
     $message = "<html><body>";
     $message .= "<h1>Votre réservation est validée</h1>";
-    $message .= "<p>Vous pouvez récupérer votre voiture le $date pour un total de {$row['Cars_prix']} € </p>";
+    $message .= "<p>Vous pouvez récupérer votre {$result['Cars_nom'][0]} le $date pour un total de {$row['Cars_prix']} € </p>";
     $message .= "<p>Merci de votre confiance et à bientôt sur TO DRIVE</p>";
     $message .= "</body></html>";
 
@@ -83,5 +82,5 @@ foreach ($result as $row) {
         echo "Une erreur est survenue";
     }
 }
-header('Location:http://localhost/SAE_RESAWEB/ReservationValid.php')
+// header('Location:http://localhost/SAE_RESAWEB/ReservationValid.php')
 ?>
