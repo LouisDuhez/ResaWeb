@@ -1,0 +1,11 @@
+@import url(allstyle.css);
+
+main {
+    height: 100vh;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+main h1 {
+    color: #E02B20;
+}

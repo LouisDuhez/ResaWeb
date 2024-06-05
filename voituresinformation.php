@@ -9,10 +9,15 @@ if(isset($_GET["valider"])) {
 }
 else {
     $requete= "SELECT * FROM `rw_cars` WHERE Cars_id={$_GET["id"]}";
-}
+};
 
 $stmt=$db->query($requete);
 $Cars=$stmt->fetchall(PDO::FETCH_ASSOC);
+if (count($Cars)===0) {
+    header("Location: error.php");
+    exit();
+};
+
 foreach($Cars as $cars){
 
 ?>

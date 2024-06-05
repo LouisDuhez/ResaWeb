@@ -70,14 +70,16 @@
         <div class="part1-number hide">
             <h3 class="hide-1 right-transition">+ <span class="number red-text"><?= $row["nbcars"] ?></span><br>Voitures disponibles</h3>
         </div>
-        <form method="GET" name="recherche" action="voituresinformation.php">
-                <input type="text" name="keywords" placeholder="Mots-clés">
-                <input type="submit" name="valider" value="recherche">
-            </form>
+        
         <?php
             };
         ?>
     </section>
+    <form method="GET" name="recherche" action="voituresinformation.php">
+                <label for="search-cars">Rechercher une voiture (nom)</label>
+                <input id="search-cars" type="text" name="keywords" placeholder="Exemple : 720s">
+                <input type="submit" name="valider" value="recherche">
+            </form>
     <div class="trait-blanc"></div>
     <section class="avis-list hide">
         <h2 class="hide-1">Nos <span class="red-text">Avis</span> :</h2>

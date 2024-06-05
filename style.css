@@ -525,10 +525,15 @@ body {
 }
 
 form {
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
 
+}
+form label{
+  font-size: 1.25rem;
+  color: white;
 }
 form input, form textarea {
   font-size: 1.125rem;
