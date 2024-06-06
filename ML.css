@@ -2,6 +2,11 @@
 main h1 {
   font-size: 3rem;
 }
+main h2:target {
+  color: white;
+    background-color: #E02B20;
+    padding: 0 15px;
+}
 
 main h2 {
   color: white;
