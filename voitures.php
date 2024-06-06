@@ -51,7 +51,7 @@
                 <select class="hide-1" name="marques" id="marques">
                 <option value="all">Toutes les marques</option>
                 <?php 
-                $allCars= "SELECT DISTINCT Cars_marque FROM rw_cars AS cars";
+                $allCars= "SELECT DISTINCT Cars_marque FROM rw_cars AS cars ORDER BY Cars_marque";
                 $cars = $db->query($allCars);
                 $result = $cars->fetchall(PDO::FETCH_ASSOC);
                 foreach ($result as $row) {
