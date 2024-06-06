@@ -11,6 +11,7 @@ header("refresh:5;url=index.php");
 </head>
 <body>
     <header>
+    <a href="#main" class="skip">Skip to main content</a>
         <a href="#main" class="skip">Skip to main content</a>
             <nav>
                 <h1><a href="index.php">To drive</a></h1>
@@ -18,7 +19,7 @@ header("refresh:5;url=index.php");
                 <a class="btn-nav" href="index.php#team">À propos</a>
             </nav>
         </header>
-        <main>
+        <main id="main">
             <h1>
                 Erreur dans la recherche :
             </h1>

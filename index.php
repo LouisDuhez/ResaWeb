@@ -46,7 +46,7 @@
             </div>
             <div class="Slogan hide">
                 <h1 class="hide-1">La voiture plus qu'un sport <br>
-                    <span class="red-background hide-4 ">UNE PASSION</span>
+                    <span class="red-background text-maj hide-4 ">Une passion</span>
                 </h1>
             </div>
         </div>
@@ -76,10 +76,10 @@
         ?>
     </section>
     <form method="GET" name="recherche" action="voituresinformation.php">
-                <label for="search-cars">Rechercher une voiture (nom)</label>
-                <input id="search-cars" type="text" name="keywords" placeholder="Exemple : 720s">
-                <input type="submit" name="valider" value="recherche">
-            </form>
+            <label id="search-cars" for="search-cars">Rechercher une voiture (nom) Attention saisie sensible à la casse</label>
+            <input aria-describedby="search-cars" id="search-cars" type="search" name="keywords" placeholder="Exemple : 720s">
+            <input type="submit" name="valider" value="recherche">
+    </form>
     <div class="trait-blanc"></div>
     <section class="avis-list hide">
         <h2 class="hide-1">Nos <span class="red-text">Avis</span> :</h2>
@@ -119,14 +119,14 @@
             
         <form action="insert_avis.php" method="GET">
             <p>Tout les champs sont obligatoires</p>
-            <label for="nom">Votre Nom </label><br>
-            <input id="nom" type="text" required name="nom"><br>
-            <label for="prenom">Votre Prénom</label><br>
-            <input id="prenom" type="text" required name="prenom"><br>
-            <label for="email">Votre E-mail</label><br>
-            <input type="email" id="email" required name="email"><br>
-            <label for="avis">Votre Avis<br>
-            <textarea required id="avis" cols="30" rows="5" maxlength="150" name="avi"></textarea><br>
+            <label id="nom" for="nom">Votre Nom </label><br>
+            <input aria-describedby="nom" id="nom" type="text" required name="nom"><br>
+            <label id="prenom" for="prenom">Votre Prénom</label><br>
+            <input aria-describedby="prenom" id="prenom" type="text" required name="prenom"><br>
+            <label id="email" for="email">Votre E-mail</label><br>
+            <input aria-describedby="email" type="email" id="email" required name="email"><br>
+            <label id="avis" for="avis">Votre Avis<br>
+            <textarea aria-describedby="avis" required id="avis" cols="30" rows="5" maxlength="150" name="avi"></textarea><br>
             <input class="submit"type="submit" value="Envoyer" name="envoyer">
             <div class="trait-blanc"></div>
         </form>

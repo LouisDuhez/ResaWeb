@@ -60,12 +60,12 @@
                     
                     <h3>Qui êtes vous ?</h3>
                     <p>Tous les champs sont obligatoires</p>
-                    <label for="prenom">Votre Prénom</label><br>
-                    <input id="prenom"type="text" name="prenom"required><br>
-                    <label for="nom">Votre Nom</label><br>
-                    <input id="nom"type="text" name="nom" required><br>
-                    <label for="email">Email <span class="emailtest"></span></label><br>
-                    <input class="email" id="email" type="text" name="email"required><br>
+                    <label id="prenom" for="prenom">Votre Prénom</label><br>
+                    <input aria-describedby="prenom" id="prenom"type="text" name="prenom"required><br>
+                    <label id="nom" for="nom">Votre Nom</label><br>
+                    <input aria-describedby="nom" id="nom"type="text" name="nom" required><br>
+                    <label id="email" for="email">Email <span class="emailtest"></span></label><br>
+                    <input aria-describedby="email" class="email" id="email" type="email" name="email"required><br>
                     <p class="erreur"></p>
                     <div class="form-top-voiture">
                         <h3>Quel voiture ?</h3>
@@ -85,10 +85,10 @@
                             
                         </p>
                     </div>
-                    <label for="voiture" >Réserver</label><br>
-                    <select name="voiture" id="voiture" required><br>
+                    <label id="voiture" for="voiture" >Réserver</label><br>
+                    <select aria-describedby="voiture" name="voiture" id="voiture" required><br>
                                <?php
-                    $requete= "SELECT * FROM rw_cars AS cars";
+                    $requete= "SELECT * FROM rw_cars AS cars ORDER BY Cars_nom";
                     $cars = $db->query($requete);
                     $result = $cars->fetchall(PDO::FETCH_ASSOC);
                     foreach ($result as $row) {
@@ -104,11 +104,11 @@
                     </select>
                     <p id="Ajoutvoiture">Ajouter +</p><br>
                     <div class="voiture2">
-                        <label for="voiture2" >Réserver une deuxième voiture</label><br>
-                        <select  name="voiture2" id="voiture2" required><br>
+                        <label id="voiture2" for="voiture2" >Réserver une deuxième voiture</label><br>
+                        <select aria-describedby="voiture2" name="voiture2" id="voiture2" required><br>
                         <option selected="selected" value="none" data-prix="0"></option>
                                    <?php
-                        $requete= "SELECT * FROM rw_cars AS cars";
+                        $requete= "SELECT * FROM rw_cars AS cars ORDER BY Cars_nom";
                         $cars = $db->query($requete);
                         $result = $cars->fetchall(PDO::FETCH_ASSOC);
                         foreach ($result as $row) {
@@ -120,8 +120,8 @@
                         ?>
                         </select>
                     </div>
-                    <label for="date">Date</label>
-                    <input name="date" id="date"type="date">
+                    <label id="date" for="date">Date</label>
+                    <input aria-describedby="date" name="date" id="date"type="date">
                     <br>
                     <input class="submit" type="submit" value="Envoyer le formulaire">
             <div class="trait-blanc"></div>

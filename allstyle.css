@@ -219,7 +219,9 @@ footer h2 {
   transition-delay: 0.4s;
 }
 
-
+.text-maj {
+  text-transform: uppercase;
+}
 /* flèche de scroll */
 .scroll-down {
   position: relative;
