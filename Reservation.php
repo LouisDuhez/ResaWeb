@@ -86,7 +86,7 @@
                         </p>
                     </div>
                     <label id="voiture" for="voiture" >Réserver</label><br>
-                    <select aria-describedby="voiture" name="voiture" id="voiture" required><br>
+                    <select aria-describedby="voiturenum1" name="voiturenum1" id="voiture" required><br>
                                <?php
                     $requete= "SELECT * FROM rw_cars AS cars ORDER BY Cars_nom";
                     $cars = $db->query($requete);
@@ -104,8 +104,8 @@
                     </select>
                     <p id="Ajoutvoiture">Ajouter +</p><br>
                     <div class="voiture2">
-                        <label id="voiture2" for="voiture2" >Réserver une deuxième voiture</label><br>
-                        <select aria-describedby="voiture2" name="voiture2" id="voiture2" required><br>
+                        <label id="voiturenum2" for="voiture2" >Réserver une deuxième voiture</label><br>
+                        <select aria-describedby="voiturenum2" name="voiture2" id="voiture2" required><br>
                         <option selected="selected" value="none" data-prix="0"></option>
                                    <?php
                         $requete= "SELECT * FROM rw_cars AS cars ORDER BY Cars_nom";
