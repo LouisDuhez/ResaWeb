@@ -85,8 +85,8 @@
                             
                         </p>
                     </div>
-                    <label id="voiture" for="voiture" >Réserver</label><br>
-                    <select aria-describedby="voiturenum1" name="voiturenum1" id="voiture" required><br>
+                    <label id="voiturenum1" for="voiture" >Réserver</label><br>
+                    <select aria-describedby="voiturenum1" name="voiture" id="voiture" required><br>
                                <?php
                     $requete= "SELECT * FROM rw_cars AS cars ORDER BY Cars_nom";
                     $cars = $db->query($requete);

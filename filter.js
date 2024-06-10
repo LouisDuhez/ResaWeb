@@ -1,4 +1,7 @@
-//Avant toute chose il y a un bug au niveau des trois système de tri le troisième donc par tri empêche les autres de fonctionner car il enlève tous les éléments du DOM pour ensuite les remettre ce que les deux autres systèmes de tries n'apprécient pas trop 
+
+// 2.a
+// 1.b
+//Avant toute chose il y a un bug au niveau des trois système de tri le troisième donc par tri empêche les autres de fonctionner car il enlève tous les éléments du DOM pour ensuite les remettre ce que les deux autres systèmes de tries n'apprécient pas trop mais par manque de temps je n'ai pas réussi à corriger ce bug
 
 /* SearchBar */
 /* On crée une variable qui permet de sélectionner la barre de recherche */
@@ -71,6 +74,8 @@ marques.addEventListener('click', (e) => {
   }
 });
 
+
+// 2.b
 /* Trier par prix */
 // On initialise une variable prix qui sélectionne le SELECT pour le tri
 let prix = document.querySelector("#prix");

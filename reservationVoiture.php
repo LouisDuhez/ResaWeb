@@ -80,6 +80,28 @@ if (mail($destinataire, $sujet, $message, $headers)) {
     echo "Une erreur est survenue";
 }
 
+
+$service = "louis.duhez@gmail.com";
+$sujetserv = "Une réservation à été effectué";
+
+//Message HTML
+$messageserv = "<html><body>";
+$messageserv .= "<p> Une réservation au nom de $nom $prenom a été enregistrer pour le $date";
+$messageserv .= "</body></html>";
+
+// Headers
+$headers = "From: contact@resaweb.duhez.butmmi.o2switch.site\r\n";
+$headers .= "Reply-To: contact@resaweb.duhez.butmmi.o2switch.site\r\n";
+$headers .= "Content-Type: text/html; charset=\"utf-8\"\r\n";
+
+// Envoi de l'email
+if (mail($service, $sujetserv, $messageserv, $headers)) {
+    echo "L'email a été envoyé !";
+} else {
+    echo "Une erreur est survenue";
+}
+
+
 // Redirection
 header('Location:http://localhost/SAE_RESAWEB/ReservationValid.php');
 exit();

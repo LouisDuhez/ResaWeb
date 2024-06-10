@@ -43,6 +43,8 @@ nb3.addEventListener('mouseleave', (e)=> {
 })
 
 
+//Vidéo de Kevin Powell : https://youtu.be/iLmBy-HKIAw?si=4DXGvl3-uxAzxbge
+
 const scrollers = document.querySelectorAll(".scroller");
 
 // If a user hasn't opted in for recuded motion, then we add the animation

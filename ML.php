@@ -44,6 +44,14 @@
             <p>To Drive est une société enregistrée conforme aux lois en vigueur. Toutes nos locations sont soumises à nos conditions générales, disponibles sur demande. Nous nous engageons à respecter les lois et réglementations locales en matière de location de véhicules.</p>
             <h2 id="politique">Politique de confidentialité</h2>
             <p>Chez To Drive, nous accordons une grande importance à la protection de vos données personnelles. Notre politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez nos services. Nous nous engageons à respecter votre vie privée et à utiliser vos données uniquement dans le cadre de la prestation de nos services de location de voitures de luxe.</p>
+            <h2>Crédits</h2>
+            <p>"Image gracieusement fournie par AR Performance et Porsche."<br>
+
+            AR Performance est une entreprise spécialisée dans la vente et la location de véhicules de luxe et de sport, offrant une large gamme de voitures prestigieuses en France​ (ARPerformance)​.
+
+        <br>
+        Utilisation du code de Kevin Powell pour le slider horizontal.
+        </p>
         </ml-information>
     </main>
     <script src="allScript.js"></script>

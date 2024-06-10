@@ -1,3 +1,5 @@
+// 1.a
+
 /* Vérification email */
 // On créer une variable avec toutes les emails temporaires : 
 let tabemail ="uooos.com, nthrw.com, bbitq.com, alldrys.com,moabuild.com,    20minutemail.it, diolang.com, aosod.com , sharklasers.com, guerrillamail.info, grr.la, guerrillamail.biz, guerrillamail.com, guerrillamail.de, guerrillamail.net, guerrillamail.org, guerrillamailblock.com, pokemail.net, spam4.me , musiccode.me, lyricspad.net, vusra.com, gufum.com, best-john-boats.com, trickyfucm.com, smartinbox.online, goonby.com, plexfirm.com, 10mail.org, firste.ml, zeroe.ml, vintomaper.com, fillallin.com, mailsac.com, mails.omvvim.edu.in, onetimeusemail.com, midiharmonica.com, yopmail.com, crazymailing.com, wemel.site, mybx.site, emeil.top, mywrld.top, matra.top, memsg.site, emailnax.com, inboxbear.com, trashmail.fr, trashmail.se, my10minutemail.com"
@@ -30,11 +32,7 @@ function emailTempDetection (inputselect, email, emailTemp) {
     }
   }
 
-
-
-
-
-
+// 1.a
 let formVoiture = document.querySelectorAll('select')
 let formSelect = document.querySelector('#voiture')
 let formOption = formSelect.options
